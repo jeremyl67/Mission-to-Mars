@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form method="post">
 	<div>
 		<label for="selectdepart">Depart :</label>
@@ -23,3 +24,34 @@
 		</select>
 	</div>
 </form>
+=======
+<div class="container">
+
+	<?php require 'apps/error.php'; ?>
+
+	<form method="post">	
+		<div class="depart">
+			<label for="depart">Selectionner votre ville de départ : </label>
+			<select name="depart" class="form-control">
+				<option>Strasbourg</option>
+			 	<option>Paris</option>
+			  	<option>New-york</option>
+			  	<option>Hong-kong</option>
+			</select>
+		</div>
+		<div class="destination">
+			<label for="destination">Selectionner votre planète de déstination : </label>
+			<select name="destination" class="form-control">
+			  	<option>Mars</option>
+			  	<option>Venus</option>
+			  	<option>Uranus</option>
+			  	<option>Lune</option>
+			</select>
+		</div>
+		<button type="submit" class="button">Valider</button>
+	</form>
+
+	<?php require 'apps/list.php'; ?>
+	
+</div>
+>>>>>>> 083a56e074f6df3ef2109818556160c605264603

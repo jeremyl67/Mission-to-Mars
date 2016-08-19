@@ -2,9 +2,11 @@
 
 $error="";
 $nom="";
+$date="";
 $depart="";
 $destination="";
 $prix="";
+$resume="";
 $classe_eco="";
 $classe_business="";
 $premiere_classe="";
@@ -13,6 +15,8 @@ $premiere_classe="";
 if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destination"]) && isset($_POST["prix"]) && isset($_POST["classe_eco"]) && isset($_POST["classe_business"]) && isset($_POST["premiere_classe"]))
 {
 		$depart=$_POST["depart"];
+		$nom=$_POST["nom"];
+		$date=$_POST["date"];
 		$destination=$_POST["destination"];
 		$prix=$_POST["prix"];
 		$classe_eco=$_POST["classe_eco"];
@@ -25,7 +29,21 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		
 		
 	}
-	if ( empty($_POST["depart"]))
+	elseif ( empty($_POST["date"]))
+	{ 
+		$error="l'entrée nom est vide";
+		var_dump($error);
+		
+		
+	}
+	elseif ( empty($_POST["resume"]))
+	{ 
+		$error="l'entrée nom est vide";
+		var_dump($error);
+		
+		
+	}
+	elseif ( empty($_POST["depart"]))
 	{ 
 		$error="l'entrée  est vide";
 		var_dump($error);
@@ -58,6 +76,9 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		
 		$stockInput = array(
 			"depart" => $depart,
+			"nom" => $nom,
+			"resume" => $resume,
+			"date" => $date,
 			"destination" => $destination,
 			"prix" => $prix,
 			"classe_business" =>  $classe_business,

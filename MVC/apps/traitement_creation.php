@@ -1,6 +1,7 @@
 <?php
 
 $error="";
+$nom="";
 $depart="";
 $destination="";
 $prix="";
@@ -17,16 +18,23 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		$classe_eco=$_POST["classe_eco"];
 		$classe_business=$_POST["classe_business"];
 		$premiere_classe=$_POST["premiere_classe"];
-	if ( empty($_POST["depart"]))
+	if ( empty($_POST["nom"]))
 	{ 
 		$error="l'entrée nom est vide";
 		var_dump($error);
 		
 		
 	}
+	if ( empty($_POST["depart"]))
+	{ 
+		$error="l'entrée  est vide";
+		var_dump($error);
+		
+		
+	}
 	else if (empty($_POST["destination"]))
 	{
-		$error="l'entrée nom est vide";
+		$error="l'entrée  est vide";
 		var_dump($error);
 		
 	}

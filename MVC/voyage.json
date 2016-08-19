@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
 	{
 		"nom":"interstellar",
@@ -40,3 +41,6 @@
       	"date":"15\/08\/1598"
    	}
 ]
+=======
+[{"depart":"a","destination":"a","prix":"10","classe_business":"10","classe_eco":"10","premiere_classe":"10"},{"depart":"a","destination":"a","prix":"1","classe_business":"1","classe_eco":"1","premiere_classe":"1"},{"depart":"a","destination":"a","prix":"1","classe_business":"1","classe_eco":"1","premiere_classe":"1"}]
+>>>>>>> a2649dbf8a3a70712db4f775c0d97857393f25ea

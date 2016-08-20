@@ -10,12 +10,15 @@ $resume="";
 $classe_eco="";
 $classe_business="";
 $premiere_classe="";
+var_dump($_POST);
+$aaaaa="";
 
-
-if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destination"]) && isset($_POST["prix"]) && isset($_POST["classe_eco"]) && isset($_POST["classe_business"]) && isset($_POST["premiere_classe"]))
+if (isset($_POST["submit"]) )
 {
+	var_dump($error);
 		$depart=$_POST["depart"];
 		$nom=$_POST["nom"];
+		$resume=$_POST["resume"];
 		$date=$_POST["date"];
 		$destination=$_POST["destination"];
 		$prix=$_POST["prix"];
@@ -63,7 +66,7 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		var_dump($error);
 		
 	}
-	else if(empty($_POST["classe_eco"])||empty($_POST["classe_business"])||empty($_POST["premiere_classe"]))
+	else if(empty($_POST["classe_eco"])&&empty($_POST["classe_business"])&&empty($_POST["premiere_classe"]))
 	{
 		$error="vous n'avez pas choisi votre classe";
 		var_dump($error);

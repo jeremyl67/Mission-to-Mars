@@ -25,7 +25,7 @@
 		"logout",
 		"erase"];
 	
-	if (in_array($_GET['page'], $accessTraitement)) {
+	if (isset($_GET['page']) && in_array($_GET['page'], $accessTraitement)) {
 		require 'apps/traitement_'.$_GET['page'].'.php';
 	}
 	

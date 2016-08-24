@@ -75,10 +75,12 @@ img{
 
 .white{
 	color: #fff;
+	font-size: 20px; 
 }
 
 .color{
 	padding-left: 10px;
+
 }
 
 main, .container{
@@ -103,6 +105,10 @@ header{
 /*	border-left: 1px #fff solid;
 	border-right: 1px #fff solid;
 */
+}
+
+img header{
+	width: 300px;
 }
 
 .logo{
@@ -211,7 +217,12 @@ article{
 	float: left;
 	text-align: right;
 	width: 40%;
-	padding: 20px 0px 40px 200px;
+	padding: 20px;
+	background: #ff0000;
+	margin-left: 100px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 15px 15px 15px 15px;
 }
 
 input{

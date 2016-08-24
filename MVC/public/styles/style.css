@@ -82,7 +82,7 @@ ul{
 
 .white{
 	color: #fff;
-	font-size: 20px; 
+	font-size: 19px; 
 }
 
 .color{
@@ -225,7 +225,6 @@ select{
 .margin-bottom{
 	margin-bottom: 20px;
 }
-
 /*--tablette-version--------------------------------------------*/
 @media screen and (max-width:950px){
 	

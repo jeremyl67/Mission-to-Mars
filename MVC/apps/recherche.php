@@ -9,6 +9,7 @@
 		$depart = $_POST['depart'];
 	}
 
+	// var_dump($depart);
 
 	if (!isset($_POST['destination']))
 	{

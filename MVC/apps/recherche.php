@@ -1,27 +1,4 @@
 <?php 
-
-$json=file_get_contents("voyage.json");
-	$stock = json_decode($json, true);
-	$i=0;
-	$choixdepart = "";
-	$choixdestination="";
-	while($i<sizeof($stock))
-	{
-		$choixdepart .= "<option>".$stock[$i]["depart"]."</option>\n";
-		$i++;
-	}
-
-	
-	$i=0;
-	
-	while($i<sizeof($stock))
-	{
-	
-		$choixdestination.= "<option>".$stock[$i]["destination"]."</option><br>";
-		$i++;
-		
-	}
-
 		
 	$depart = "";
 	$destination = "";
@@ -62,9 +39,6 @@ $json=file_get_contents("voyage.json");
 			$resume = $temp[$i]['resume'];
 			$prix = $temp[$i]['prix'];
 		} 
-
-		$collect[] = get_fields();
-		var_dump($collect);
 		
 		$choixdepart .= "<option>" . $temp[$i]['depart'] . "</option>\n";
 		$choixdestination .= "<option>" . $temp[$i]['destination'] . "</option>\n";

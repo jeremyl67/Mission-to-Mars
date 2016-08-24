@@ -1,5 +1,6 @@
-<?php 
-$json = file_get_contents('voyage.json');
+<?php
+ 
+	$json = file_get_contents('voyage.json');
 	$temp = json_decode($json, true);
 	$voyage =[];
 	
@@ -12,5 +13,4 @@ $json = file_get_contents('voyage.json');
 	require ("views/voyage.phtml");
 	}
 		
-	
- ?>
+?>

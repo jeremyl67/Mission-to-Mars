@@ -17,47 +17,45 @@ body{
     box-sizing: border-box;
 }
 
-ul{
+ul, li{
 	margin: 0;
 	padding: 0;
 }
 
-li{
-	margin: 0;
-	padding: 0;
+.centauriTitle{
+	padding-top:80px;
+	padding-left:280px;
+}
+
+h1, h2{
+	text-align: left;
+	margin:0;
+	font-style: ;
 }
 
 h1{
-	text-align: left;
 	font-weight: normal;
 	font-size: 40px;
-	margin: 0px 0px 0px 10px;
 	color: #fff;
 }
 
 h2{
-	text-align: left;
 	font-weight: normal;
 	font-size: 30px;
-	margin: 0px 0px 40px 10px;
 	color: #fff;
 }
 
 h3{
-	background: #fff;
+	background-color: white;
+	color: rgb(150,25,5);
 }
 
-nav a{
+a{
 	text-decoration: none;
-	color: white;
-	padding: 30px 10px;
 }
 
-nav a:hover{
-	
-	background: white;
-	color: #ff0000;
-	text-decoration: none;
+nav{
+	margin: 5px;
 }
 
 img{
@@ -75,14 +73,9 @@ img{
 	margin: 10px;
 }
 
-ul{
-	margin: 0;
-	padding: 0;
-}
-
 .white{
 	color: #fff;
-	font-size: 20px; 
+	font-size: 19px; 
 }
 
 .color{
@@ -97,11 +90,21 @@ main, .container{
 }
 /*--header--------------------------------------------*/
 header{
-	margin: 0;
-	margin-bottom: 30px;
+	padding-bottom: 30px;
+/*	margin-bottom: 0px;
 	background-image: url("../images/background.jpg");
-	border-left: 1px #fff solid;
+*/	background-color:rgb(4,8,12);
+	background-image: url("../images/HeaderPlanet.jpg");
+	background-repeat: no-repeat;
+	background-size:1200px 240px;
+	border-radius: 0px 0px 20px 20px;
+	border-width:8px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
+	box-shadow:  0px 0px 0.6em rgb(20,0,0);
+/*	border-left: 1px #fff solid;
 	border-right: 1px #fff solid;
+*/
 }
 
 img header{
@@ -118,18 +121,45 @@ img header{
 /*--nav--------------------------------------------*/
 nav{
 	display: block;
-	background: #ff0000;
-	padding-right: 180px;
+	float: left;
+/*	background: #ff0000;
+*/	padding-left: 180px;
+	margin-bottom: 15px;
 }
 
 .nav li{
 	display: inline-block;
 	font-size: 20px;
-	padding: 30px 10px;
+	padding: 15px 10px;
 	color: #fff;
 }
 
+nav a{
+	color: white;
+	padding: 6px 14px;
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+/*	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+*/	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+	border-radius: 10px;	
+	border-width:6px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
+	transform:matrix(-0.5,0.8,0.0,0.0,0,0);
+	transition: all 0.2s linear 0.2s;
+}
 
+nav a:hover{
+	background: rgb(255,220,215);
+	background: -webkit-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
+	background: -o-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
+	background: -moz-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
+	background: linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
+	color: rgb(150,25,5);
+}
 /*--article--------------------------------------------*/
 article{
 	clear: both;
@@ -159,40 +189,22 @@ article{
 	text-align: left;
 	float: right;
 	padding: 30px 10px;
-	border-right: 1px #fff solid;
-	margin-bottom: 30px;
+/*	border-right: 1px #fff solid;
+*/	margin-bottom: 30px;
 	border-radius: 15px 0px 0px 15px;
-}
 
-.cGV{
-	border-size:2px;
-	border-radius:5px;
-	margin:20px;
-	box-shadow:  inset 1px 1px 1em rgb(50,50,50);
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+/*	border-radius: 10px;	
+*/	border-width:6px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
 }
-
-.floatLeft{
-	display:inline-block;
-	float:left;
-}
-
-.floatRight{
-	display:inline-block;
-	float:right;
-}
-
-/*--footer--------------------------------------------*/
-footer{
-	clear: both;
-	display: block;
-	background: #ff0000;
-	padding: 10px 0;
-	margin: 0;
-	color: #fff;
-	border-left: 1px #fff solid;
-	border-right: 1px #fff solid;
-}
-
 /*--formulaire--------------------------------------------*/
 .register{
 	float: right;
@@ -207,11 +219,22 @@ footer{
 	text-align: right;
 	width: 40%;
 	padding: 20px;
-	background: #ff0000;
 	margin-left: 100px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border-radius: 15px 15px 15px 15px;
+
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+	border-radius: 20px 20px 20px 20px;	
+	border-width:6px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
 }
 
 input{
@@ -225,7 +248,27 @@ select{
 .margin-bottom{
 	margin-bottom: 20px;
 }
+/*--footer--------------------------------------------*/
+footer{
+	clear: both;
+	display: block;
+	background: #ff0000;
+	padding: 5px 0;
+	margin: 0;
+	color: #fff;
 
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+	border-radius: 20px 20px 0px 0px;	
+	border-width:6px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
+}
 /*--tablette-version--------------------------------------------*/
 @media screen and (max-width:950px){
 	

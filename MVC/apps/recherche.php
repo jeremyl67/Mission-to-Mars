@@ -1,26 +1,6 @@
 <?php 
 
-$json=file_get_contents("voyage.json");
-	$stock = json_decode($json, true);
-	$i=0;
-	$choixdepart = "";
-	$choixdestination="";
-	while($i<sizeof($stock))
-	{
-		$choixdepart .= "<option>".$stock[$i]["depart"]."</option>\n";
-		$i++;
-	}
 
-	
-	$i=0;
-	
-	while($i<sizeof($stock))
-	{
-	
-		$choixdestination.= "<option>".$stock[$i]["destination"]."</option><br>";
-		$i++;
-		
-	}
 
 		
 	$depart = "";

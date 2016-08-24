@@ -1,7 +1,3 @@
-
-<div class="container">
-
-	<?php require 'apps/error.php'; ?>
 	<div class="login">
 		<form method="post">	
 			<div class="depart">
@@ -11,17 +7,16 @@
 				</select>
 			</div>
 			<div class="destination">
-				<label class="white" for="destination">Selectionner votre planète de déstination : </label>
+				<label class="white" for="destination">Selectionner votre planète de destination : </label>
 				<select name="destination" class="form-control">
 				  	<?php echo $choixdestination; ?>
 				</select>
 			</div>
 			<button type="submit" class="button">Valider</button>
 		</form>
-
-	
-	<?php require 'apps/list.php'; ?>
-	
-
+		<div class="white">
+			<?php require 'apps/list.php'; ?>
+		</div>
 	</div>
-</div>
+
+

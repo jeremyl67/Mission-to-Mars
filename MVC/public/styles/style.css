@@ -86,14 +86,14 @@ img{
 main, .container{
 	max-width: 1200px;
 	margin: 0 auto;
-    background: #fff;
+	background: #fff;
 }
 /*--header--------------------------------------------*/
 header{
 	padding-bottom: 30px;
-  /*margin-bottom: 0px;*/
-  /*background-image: url("../images/background.jpg");*/
-	background-color:rgb(4,8,12);
+/*	margin-bottom: 0px;
+	background-image: url("../images/background.jpg");
+*/	background-color:rgb(4,8,12);
 	background-image: url("../images/HeaderPlanet.jpg");
 	background-repeat: no-repeat;
 	background-size:1200px 240px;
@@ -102,8 +102,9 @@ header{
 	border-style:solid;
 	border-color: rgb(170,20,0);
 	box-shadow:  0px 0px 0.6em rgb(20,0,0);
-  /*border-left: 1px #fff solid;*/
-  /*border-right: 1px #fff solid;*/
+/*	border-left: 1px #fff solid;
+	border-right: 1px #fff solid;
+*/
 }
 
 img header{
@@ -120,8 +121,9 @@ img header{
 /*--nav--------------------------------------------*/
 nav{
 	display: block;
-	float: left;	
-	padding-left: 180px;
+	float: left;
+/*	background: #ff0000;
+*/	padding-left: 180px;
 	margin-bottom: 15px;
 }
 
@@ -140,8 +142,8 @@ nav a{
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
-  /*box-shadow: inset 0px 0px 1em rgb(20,0,0);*/
-	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+/*	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+*/	box-shadow:  0px 0px 0.6em rgb(0,0,0);
 	border-radius: 10px;	
 	border-width:6px;
 	border-style:solid;
@@ -169,7 +171,7 @@ article{
 	text-align: left;
 	float: left;
 	padding: 25px 25px;
-    background: #fff;
+	background: #fff;
 	overflow: hidden;
 }
 
@@ -187,8 +189,8 @@ article{
 	text-align: left;
 	float: right;
 	padding: 30px 10px;
-  /*border-right: 1px #fff solid;*/
-	margin-bottom: 30px;
+/*	border-right: 1px #fff solid;
+*/	margin-bottom: 30px;
 	border-radius: 15px 0px 0px 15px;
 
 	background: rgb(210,70,35);
@@ -198,8 +200,8 @@ article{
 	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
 	box-shadow:  0px 0px 0.6em rgb(0,0,0);
-  /*border-radius: 10px;*/	
-	border-width:6px;
+/*	border-radius: 10px;	
+*/	border-width:6px;
 	border-style:solid;
 	border-color: rgb(170,20,0);
 }

@@ -1,14 +1,14 @@
 <?php
-if (isset($_POST['submit']))
+if (isset($_POST['action']))
 {
 	
 	$json=file_get_contents("voyage.json");
 	$stock = json_decode($json, true);
-	$nom = $_POST["id"];
+	$id = $_POST["id"];
 	$i = 0;
 	while($i < sizeof($stock))
 	{
-		if($stock[$i]["nom"] == $nom)
+		if($stock[$i]["id"] == $id)
 		{
 			array_splice($stock, $i, 1);
 

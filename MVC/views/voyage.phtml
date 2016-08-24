@@ -1,4 +1,4 @@
-<div class="container">
+ <div class="container">
 
 	<?=$error?>
 	<img src="<?=$voyage["url"]?>">
@@ -22,8 +22,14 @@
 
 	<p>Résumé du voyage : <?=$voyage['resume']?></p>
 	<form method="POST" action="index.php?page=erase">
-		<input type="hidden" name="id" value="<?=$voyage['nom']?>">
-		<button  type="submit" name="submit">erase</button>
+		<input type="hidden" name="id" value="<?=$voyage['id']?>">
+		<button  type="submit" name="action" value="erase">erase</button>
+
+	</form>
+	<form method="GET">
+		<input type="hidden" name="page" value="creation">
+		<input type="hidden" name="id" value="<?=$voyage['id']?>">
+		<button  type="submit">edit</button>
 	</form>
 
 	<hr>

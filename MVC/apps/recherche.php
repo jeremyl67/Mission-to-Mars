@@ -1,7 +1,10 @@
 <?php 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 0539bdb924cb185fc10137b239c61a9e71c8afbf
 		
 	$depart = "";
 	$destination = "";
@@ -76,9 +79,6 @@
 			$resume = $temp[$i]['resume'];
 			$prix = $temp[$i]['prix'];
 		} 
-
-		$collect[] = get_fields();
-		var_dump($collect);
 		
 		$choixdepart .= "<option>" . $temp[$i]['depart'] . "</option>\n";
 		$choixdestination .= "<option>" . $temp[$i]['destination'] . "</option>\n";

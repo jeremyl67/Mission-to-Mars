@@ -75,6 +75,11 @@ img{
 	margin: 10px;
 }
 
+ul{
+	margin: 0;
+	padding: 0;
+}
+
 .white{
 	color: #fff;
 }
@@ -117,6 +122,8 @@ nav{
 	padding: 30px 10px;
 	color: #fff;
 }
+
+
 /*--article--------------------------------------------*/
 article{
 	clear: both;
@@ -161,6 +168,7 @@ footer{
 	border-left: 1px #fff solid;
 	border-right: 1px #fff solid;
 }
+
 /*--formulaire--------------------------------------------*/
 .register{
 	float: right;

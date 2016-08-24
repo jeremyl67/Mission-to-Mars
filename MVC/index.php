@@ -1,6 +1,7 @@
 <?php
 	//var_dump($_POST);
 	session_start();
+	$erase="";
 	$error = '';
 	$page = 'home';
 	$access = [
@@ -9,7 +10,8 @@
 		"creation", 
 		"recherche", 
 		"destinations", 
-		"billets"];
+		"billets",
+		"voyage"];
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $access))
 	{
@@ -20,10 +22,11 @@
 		"creation", 
 		"recherche", 
 		"login-register", 
-		"logout"];
+		"logout",
+		"erase"];
 	
-	if (in_array($page, $accessTraitement)) {
-		require 'apps/traitement_'.$page.'.php';
+	if (in_array($_GET['page'], $accessTraitement)) {
+		require 'apps/traitement_'.$_GET['page'].'.php';
 	}
 	
 	require 'apps/skel.php';

@@ -1,6 +1,6 @@
-<?php require 'apps/error.php'; ?>
 <div class="login">
 	<form method="post"  autocomplete="off">
+		<input type="hidden" name="id" value="<?=$id?>">
 		<div class="recherche">
 			<label class="white" for="nom">nom :</label>
 			<input id="nom" type="text" name="nom" placeholder="nom"/>
@@ -42,7 +42,8 @@
 			<input id="date" type="url" name="url" placeholder="http://"/>
 		</div>
 		<div class="recherche">
-			<button type="submit" name="submit">envoyer</button>
+			<button type="submit" name="action" value="<?=$action?>">envoyer</button>
 		</div>
 	</form>
+	<?php require 'apps/error.php'; ?>
 </div>

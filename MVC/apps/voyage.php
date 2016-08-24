@@ -7,7 +7,7 @@ $json = file_get_contents('voyage.json');
 	while ($i<sizeof($temp))
 	{
 		$voyage=$temp[$i];
-		// var_dump($voyage);
+		
 		$i++;
 	require ("views/voyage.phtml");
 	}

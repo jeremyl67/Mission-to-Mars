@@ -34,8 +34,7 @@ $json=file_get_contents("voyage.json");
 		$depart = $_POST['depart'];
 	}
 
-	// var_dump($depart);
-
+	
 	if (!isset($_POST['destination']))
 	{
 		$error = 'cocher le sesk wesh';
@@ -48,7 +47,7 @@ $json=file_get_contents("voyage.json");
 	$temp = json_decode($json, true);
 	$list = [];
 	foreach ($temp as $voyage) {
-		// var_dump($voyage, $depart, $destination);
+		  
 		if ($voyage['depart'] == $depart && $voyage['destination'] == $destination) {
 	
 			$list[] = $voyage;
@@ -64,7 +63,14 @@ $json=file_get_contents("voyage.json");
 	
 	while($i<sizeof($temp))
 	{
-		$choixdepart .= "<option>".$temp[$i]["depart"]."</option>\n";
+		echo "aaaa";
+		if($choixdepart!=$temp[$i]['depart'])
+			{ 
+				echo "bbbbb";
+		
+			$choixdepart .= "<option>".$temp[$i]["depart"]."</option>\n";
+			}
+
 		$i++;
 	}
 
@@ -73,8 +79,10 @@ $json=file_get_contents("voyage.json");
 	
 	while($i<sizeof($temp))
 	{
-	
+		
+			
 		$choixdestination.= "<option>".$temp[$i]["destination"]."</option><br>";
+		
 		$i++;
 		
 	}

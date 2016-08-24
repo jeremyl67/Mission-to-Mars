@@ -157,6 +157,24 @@ article{
 	margin-bottom: 30px;
 	border-radius: 15px 0px 0px 15px;
 }
+
+.cGV{
+	border-size:2px;
+	border-radius:5px;
+	margin:20px;
+	box-shadow:  inset 1px 1px 1em rgb(50,50,50);
+}
+
+.floatLeft{
+	display:inline-block;
+	float:left;
+}
+
+.floatRight{
+	display:inline-block;
+	float:right;
+}
+
 /*--footer--------------------------------------------*/
 footer{
 	clear: both;
@@ -185,9 +203,18 @@ footer{
 	padding: 20px 0px 40px 200px;
 }
 
-button{
-	margin-top: 20px;
+input{
+	margin-bottom: 20px;
 }
+
+select{
+	margin-bottom: 20px;
+}
+
+.margin-bottom{
+	margin-bottom: 20px;
+}
+
 /*--tablette-version--------------------------------------------*/
 @media screen and (max-width:950px){
 	

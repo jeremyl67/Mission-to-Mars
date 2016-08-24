@@ -185,9 +185,18 @@ footer{
 	padding: 20px 0px 40px 200px;
 }
 
-button{
-	margin-top: 20px;
+input{
+	margin-bottom: 20px;
 }
+
+select{
+	margin-bottom: 20px;
+}
+
+.margin-bottom{
+	margin-bottom: 20px;
+}
+
 /*--tablette-version--------------------------------------------*/
 @media screen and (max-width:950px){
 	

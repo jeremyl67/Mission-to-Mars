@@ -14,7 +14,7 @@
 		<p>Remplir l'adresse de facturation :</p>
 		<div>
     		<label for="aliasrue">N°, Rue ou voie :</label>
-    		<input id="aliasprue" type="text" name="rue" placeholder="N°, Rue ou voie :"/>
+    		<input id="aliasprue" type="text" name="adresse" placeholder="N°, Rue ou voie :"/>
 		</div>
 		<div>
     		<label for="aliascp">Code postal :</label>
@@ -32,7 +32,7 @@
 		<!-- e-mail -->
 		<div>
 			<label for="aliasemail">Adresse e-mail :</label>
-			<input id="aliasemail" type="text" name="email" placeholder="Votre EMAIL"/>
+			<input id="aliasemail" type="email" name="email" placeholder="Votre EMAIL"/>
 		</div>
 		<!-- password -->
 		<div>
@@ -41,11 +41,11 @@
 	    </div>
 	    <div>
 	    	<label for="aliascmdp">Comfirm.Password :</label>
-		    <input id="aliascmdp" type="password" name="comfirm _password"/>
+		    <input id="aliascmdp" type="password" name="password2"/>
 		</div>
 		<!-- valid -->
 		<div>
-			<button type="submit">Envoyer</button>
+			<button type="submit" name="register" value="register">Envoyer</button>
 		</div>
 	</form>
 </div>
@@ -54,17 +54,17 @@
 	<form method="post">
 		<!-- login -->
 		<div>
-			<label for="aliaslogin">Login :</label>
-			<input id="aliaslogin" type="text" name="login" placeholder=""/>
+			<label for="aliaslogin">Email :</label>
+			<input id="aliaslogin" type="email" name="email" placeholder=""/>
 		</div>
 		<!-- password -->
 		<div>
 			<label for="aliasmdp">Password :</label>
-		    <input id= "aliasmdp" type="password" name="password"/>
+		    <input id="aliasmdp" type="password" name="password"/>
 		</div>
 		<!-- Connexion -->
 		<div>
-			<button type="submit">Connexion</button>
+			<button type="submit" name="login" value="login">Connexion</button>
 		</div>
 	</form>
 </div>

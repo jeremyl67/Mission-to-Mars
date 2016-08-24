@@ -21,10 +21,10 @@ $json=file_get_contents("voyage.json");
 		$i++;
 		
 	}
+
 		
-		
-	$depart="";
-	$destination="";
+	$depart = "";
+	$destination = "";
  
 
 	if (!isset($_POST['depart']))
@@ -34,6 +34,7 @@ $json=file_get_contents("voyage.json");
 		$depart = $_POST['depart'];
 	}
 
+	// var_dump($depart);
 
 	if (!isset($_POST['destination']))
 	{
@@ -55,12 +56,30 @@ $json=file_get_contents("voyage.json");
 			$error = "Aucun départ ou destination n'est répertorié ";
 		}
 	}
+
+	$i = 0;
+	
+	$choixdepart = "";
+	$choixdestination = "";
+	
+	while($i<sizeof($temp))
+	{
+		$choixdepart .= "<option>".$temp[$i]["depart"]."</option>\n";
+		$i++;
+	}
+
+	
+	$i=0;
+	
+	while($i<sizeof($temp))
+	{
+	
+		$choixdestination.= "<option>".$temp[$i]["destination"]."</option><br>";
+		$i++;
+		
+	}
 	
 
-			require 'views/recherche.phtml'; 
-
-
-
-
+	require 'views/recherche.phtml'; 
 
 ?>

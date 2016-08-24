@@ -11,7 +11,9 @@
 		"recherche", 
 		"destinations", 
 		"billets",
+		"logout",
 		"voyage"];
+
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $access))
 	{
@@ -19,8 +21,7 @@
 	}
 	
 	$accessTraitement = [
-		"creation", 
-		"recherche", 
+		"creation",  
 		"login-register", 
 		"logout",
 		"erase"];
@@ -28,6 +29,6 @@
 	if (isset($_GET['page']) && in_array($_GET['page'], $accessTraitement)) {
 		require 'apps/traitement_'.$_GET['page'].'.php';
 	}
-	
+
 	require 'apps/skel.php';
 ?>

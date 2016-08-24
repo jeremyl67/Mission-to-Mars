@@ -1,4 +1,56 @@
-<div class="cube1">
+<div class="register">
+	<form method="post">	
+    	<!-- nom -->
+    	<div>
+    		<label for="aliasnom">Nom :</label>
+    		<input id="aliasnom" type="text" name="nom" placeholder="Votre NOM"/>
+		</div>
+		<!-- prenom -->
+		<div>
+    		<label for="aliasprenom">Prénom :</label>
+    		<input id="aliasprenom" type="text" name="prenom" placeholder="Votre PRENOM"/>
+		</div>
+		<!-- adresse -->
+		<p>Remplir l'adresse de facturation :</p>
+		<div>
+    		<label for="aliasrue">N°, Rue ou voie :</label>
+    		<input id="aliasprue" type="text" name="rue" placeholder="N°, Rue ou voie :"/>
+		</div>
+		<div>
+    		<label for="aliascp">Code postal :</label>
+    		<input id="aliaspcp" type="text" name="cp" placeholder="00000"/>
+		</div>
+		<div>
+    		<label for="aliasville">Ville :</label>
+    		<input id="aliasville" type="text" name="ville" placeholder="Ville"/>
+		</div>
+		<!-- telephone -->
+		<div>
+	    	<label for="aliastel">Téléphone :</label>
+	    	<input id="aliastel" type="text" name="tel" placeholder="+33"/>
+		</div>
+		<!-- e-mail -->
+		<div>
+			<label for="aliasemail">Adresse e-mail :</label>
+			<input id="aliasemail" type="text" name="email" placeholder="Votre EMAIL"/>
+		</div>
+		<!-- password -->
+		<div>
+			<label for="aliasmdp">Password :</label>
+		    <input id="aliasmdp" type="password" name="password"/>
+	    </div>
+	    <div>
+	    	<label for="aliascmdp">Comfirm.Password :</label>
+		    <input id="aliascmdp" type="password" name="comfirm _password"/>
+		</div>
+		<!-- valid -->
+		<div>
+			<button type="submit">Envoyer</button>
+		</div>
+	</form>
+</div>
+
+<div class="login">
 	<form method="post">
 		<!-- login -->
 		<div>
@@ -8,45 +60,11 @@
 		<!-- password -->
 		<div>
 			<label for="aliasmdp">Password :</label>
-		    <input id= "aliasmdp" type="password" name="mdp"/>
+		    <input id= "aliasmdp" type="password" name="password"/>
 		</div>
 		<!-- Connexion -->
 		<div>
 			<button type="submit">Connexion</button>
-		</div>
-	</form>
-</div>
-
-<div class="cube1">
-	<form method="post">	
-	    	<!-- Nom -->
-    	<div>
-    		<label for="aliasnom">Nom :</label>
-    		<input id="aliasnom" type="text" name="nom" placeholder=""/>
-		</div>
-		<!-- Prénom -->
-		<div>
-	    		<label for="aliasprenom">Prénom :</label>
-	    		<input id="aliasprenom" type="text" name="prenom" placeholder=""/>
-		</div>
-		<!-- e-mail -->
-		<div>
-			<label for="aliasemail">Adresse e-mail :</label>
-				<input id="aliasemail" type="text" name="email" placeholder=""/>
-		</div>
-			<!-- password -->
-		<div>
-				<label for="aliasmdp">Password :</label>
-			    <input id="aliasmdp" type="password" name="mdp"/>
-		</div>
-		<!-- checkbox -->
-			<div>
-			<label for="aliasvalid">je ne suis pas un robot</label>
-			<input id="aliasvalid" type="checkbox" name="valid" value="1">    	
-		</div>
-		<!-- valid -->
-		<div>
-			<button type="submit">Envoyer</button>
 		</div>
 	</form>
 </div>

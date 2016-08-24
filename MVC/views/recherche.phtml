@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+<form method="post">
+	<div>
+		<label for="selectdepart">Depart :</label>
+		<select id="selectdepart" name="selectdepart">
+			<option value="strasbourgterre">Strasbourg (Terre)</option>
+			<option value="paristerre">Paris (Terre)</option>
+			<option value="brestterre">Brest (Terre)</option>
+			<option value="mercure">Mercure</option>
+			<option value="mars">Mars</option>
+			<option value="pluton">Pluton</option>
+		</select>
+	</div>
+
+	<div>
+		<label for="selectdestinationt">Depart :</label>
+		<select id="selectdestination" name="selectdestination">
+			<option value="pluton">Pluton</option>
+			<option value="mars">Mars</option>
+			<option value="mercure">Mercure</option>
+			<option value="brestterre">Brest (Terre)</option>
+			<option value="paristerre">Paris (Terre)</option>
+			<option value="strasbourgterre">Strasbourg (Terre)</option>	
+		</select>
+	</div>
+</form>
+=======
+<div class="container">
+
+	<?php require 'apps/error.php'; ?>
+
+	<form method="post">	
+		<div class="depart">
+			<label for="depart">Selectionner votre ville de départ : </label>
+			<select name="depart" class="form-control">
+				<option>Strasbourg</option>
+			 	<option>Paris</option>
+			  	<option>New-york</option>
+			  	<option>Hong-kong</option>
+			</select>
+		</div>
+		<div class="destination">
+			<label for="destination">Selectionner votre planète de déstination : </label>
+			<select name="destination" class="form-control">
+			  	<option>Mars</option>
+			  	<option>Venus</option>
+			  	<option>Uranus</option>
+			  	<option>Lune</option>
+			</select>
+		</div>
+		<button type="submit" class="button">Valider</button>
+	</form>
+
+	<?php require 'apps/list.php'; ?>
+	
+</div>
+>>>>>>> 083a56e074f6df3ef2109818556160c605264603

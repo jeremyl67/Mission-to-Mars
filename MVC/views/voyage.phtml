@@ -1,0 +1,30 @@
+<div class="container">
+
+	<?=$error?>
+	<img src="<?=$voyage["url"]?>">
+	<h1 style="color:#000;"><?=$voyage['nom']?></h1>
+
+	<p class="lead">
+	    date du voyage <a href="#"><?=$voyage['date']?></a>
+	</p>
+
+	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
+
+	<hr>
+
+	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=$voyage['destination']?></p>
+
+	<hr>
+
+	<p>Prix du voyage : <?=$voyage['prix']?></p>
+
+	<hr>
+
+	<p>Résumé du voyage : <?=$voyage['resume']?></p>
+	<form method="POST" action="index.php?page=erase">
+		<input type="hidden" name="id" value="<?=$voyage['nom']?>">
+		<button  type="submit" name="submit">erase</button>
+	</form>
+
+	<hr>
+</div>

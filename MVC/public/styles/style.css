@@ -38,7 +38,7 @@ ul{
 	padding: 0;
 }
 
-main, .container{
+.main, .container{
 	max-width: 1200px;
 	margin: 0 auto;
 	background: #fff;
@@ -64,7 +64,7 @@ header{
 
 .logo{
 	display: block;
-	width: 300px;
+	max-width: 100%;
 	float: left;
 	margin-top: -50px;
 }
@@ -80,7 +80,7 @@ nav{
 	padding: 25px 20px;
 	color: #fff;
 }
-/*--formulaire--------------------------------------------*/
+/*--ulaire--------------------------------------------*/
 .login{
 	display: block;
 	width: 60%;

@@ -6,16 +6,21 @@ $date="";
 $depart="";
 $destination="";
 $prix="";
+$url="";
 $resume="";
 $classe_eco="";
 $classe_business="";
 $premiere_classe="";
+var_dump($_POST);
+$aaaaa="";
 
-
-if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destination"]) && isset($_POST["prix"]) && isset($_POST["classe_eco"]) && isset($_POST["classe_business"]) && isset($_POST["premiere_classe"]))
+if (isset($_POST["submit"]) )
 {
+	var_dump($error);
 		$depart=$_POST["depart"];
+		$url=$_POST["url"];
 		$nom=$_POST["nom"];
+		$resume=$_POST["resume"];
 		$date=$_POST["date"];
 		$destination=$_POST["destination"];
 		$prix=$_POST["prix"];
@@ -31,28 +36,28 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 	}
 	elseif ( empty($_POST["date"]))
 	{ 
-		$error="l'entrée nom est vide";
+		$error="l'entrée date est vide";
 		var_dump($error);
 		
 		
 	}
 	elseif ( empty($_POST["resume"]))
 	{ 
-		$error="l'entrée nom est vide";
+		$error="l'entrée resume est vide";
 		var_dump($error);
 		
 		
 	}
 	elseif ( empty($_POST["depart"]))
 	{ 
-		$error="l'entrée  est vide";
+		$error="l'entrée  depart est vide";
 		var_dump($error);
 		
 		
 	}
 	else if (empty($_POST["destination"]))
 	{
-		$error="l'entrée  est vide";
+		$error="l'entrée  desyination est vide";
 		var_dump($error);
 		
 	}
@@ -63,7 +68,7 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		var_dump($error);
 		
 	}
-	else if(empty($_POST["classe_eco"])||empty($_POST["classe_business"])||empty($_POST["premiere_classe"]))
+	else if(empty($_POST["classe_eco"])&&empty($_POST["classe_business"])&&empty($_POST["premiere_classe"]))
 	{
 		$error="vous n'avez pas choisi votre classe";
 		var_dump($error);
@@ -83,8 +88,8 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 			"prix" => $prix,
 			"classe_business" =>  $classe_business,
 			"classe_eco" => $classe_eco,
-			"premiere_classe" => $premiere_classe
-			
+			"premiere_classe" => $premiere_classe,
+			"url"=>$url
 		);
 		$json=file_get_contents("voyage.json");
 		$stock = json_decode($json, true);
@@ -92,7 +97,7 @@ if (isset($_POST["submit"]) && isset($_POST["depart"]) && isset($_POST["destinat
 		// array_push($stock,$stockInput);
 		$json=json_encode($stock);
 		file_put_contents("voyage.json", $json);
-		header("Location: index.php?page=home");
+		header("Location: index.php?page=voyage");
 		exit; 
 	}
 		

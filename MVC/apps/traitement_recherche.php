@@ -1,31 +1,43 @@
-<?php  
-/*
-	if (!isset($_POST['depart']))
-	{
-		$error = 'cocher le sesk wesh';
-	} else {
-		$depart = $_POST['depart'];
-	}
-
-
-	if (!isset($_POST['destination']))
-	{
-		$error = 'cocher le sesk wesh';
-	} else {
-		$destination = $_POST['destination'];
-	}
-
-	var_dump($depart, $destination);
-
-	$json = file_get_contents('voyage.json');
-	$temp = json_decode($json, true);
-
-	foreach ($temp as $voyage) {
-		if ($voyage['depart'] == $depart && $voyage['destination'] == $destination) {
-			$voyage;
-		} else {
-			$error = "Aucun départ ou destination n'est répertorié ";
+<?php 
+/*$depart1="";
+$destination="";
+$json=file_get_contents("stock.json");
+$stock = json_decode($json, true);
+		$i=0;
+		while($i<sizeof($stock))
+		{
+		
+			$depart1="<option value='<?=$stock[$i]['depart']'><?=$stock[$i]['depart']'></option>";
+			$i++;
+		var_dump($depart1)
 		}
-	}
-*/
+		
+		header("Location: index.php?page=recherche");
+		exit;*/
 ?>	
+
+
+<?php 
+	$json=file_get_contents("voyage.json");
+	$stock = json_decode($json, true);
+	$i=0;
+	$choixdepart = "";
+	$choixdestination="";
+	while($i<sizeof($stock))
+	{
+		$choixdepart .= "<option>".$stock[$i]["depart"]."</option>\n";
+		$i++;
+	}
+
+	
+	$i=0;
+	
+	while($i<sizeof($stock))
+	{
+	
+		$choixdestination.= "<option>".$stock[$i]["destination"]."</option><br>";
+		$i++;
+		
+	}
+						
+?>

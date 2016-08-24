@@ -6,6 +6,7 @@ $date="";
 $depart="";
 $destination="";
 $prix="";
+$url="";
 $resume="";
 $classe_eco="";
 $classe_business="";
@@ -17,6 +18,7 @@ if (isset($_POST["submit"]) )
 {
 	var_dump($error);
 		$depart=$_POST["depart"];
+		$url=$_POST["url"];
 		$nom=$_POST["nom"];
 		$resume=$_POST["resume"];
 		$date=$_POST["date"];
@@ -34,28 +36,28 @@ if (isset($_POST["submit"]) )
 	}
 	elseif ( empty($_POST["date"]))
 	{ 
-		$error="l'entrée nom est vide";
+		$error="l'entrée date est vide";
 		var_dump($error);
 		
 		
 	}
 	elseif ( empty($_POST["resume"]))
 	{ 
-		$error="l'entrée nom est vide";
+		$error="l'entrée resume est vide";
 		var_dump($error);
 		
 		
 	}
 	elseif ( empty($_POST["depart"]))
 	{ 
-		$error="l'entrée  est vide";
+		$error="l'entrée  depart est vide";
 		var_dump($error);
 		
 		
 	}
 	else if (empty($_POST["destination"]))
 	{
-		$error="l'entrée  est vide";
+		$error="l'entrée  desyination est vide";
 		var_dump($error);
 		
 	}
@@ -86,8 +88,8 @@ if (isset($_POST["submit"]) )
 			"prix" => $prix,
 			"classe_business" =>  $classe_business,
 			"classe_eco" => $classe_eco,
-			"premiere_classe" => $premiere_classe
-			
+			"premiere_classe" => $premiere_classe,
+			"url"=>$url
 		);
 		$json=file_get_contents("voyage.json");
 		$stock = json_decode($json, true);
@@ -95,7 +97,7 @@ if (isset($_POST["submit"]) )
 		// array_push($stock,$stockInput);
 		$json=json_encode($stock);
 		file_put_contents("voyage.json", $json);
-		header("Location: index.php?page=home");
+		header("Location: index.php?page=voyage");
 		exit; 
 	}
 		

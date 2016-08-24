@@ -1,41 +1,48 @@
-
-<form method="post">
-	<div>
+<?php require 'apps/error.php'; ?>
+<form method="post"  autocomplete="off">
+	<div class="recherche">
 		<label for="nom">nom :</label>
-		<input id="nom" type="text" name="nom" placeholder="Depart"/>
+		<input id="nom" type="text" name="nom" placeholder="nom"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="depart">Depart :</label>
 		<input id="depart" type="text" name="depart" placeholder="Depart"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="destination">Destination :</label>
-		<input id="destination" type="text" name="destination" placeholder="Destination"/>
+		<input id="destination" type="text" name="destination" placeholder="Destination" />
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="prix">Prix :</label>
-		<input id="prix" type="text" name="prix" placeholder="prix"/>
+		<input id="prix" type="number" name="prix" placeholder="prix"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="classe_eco">Classe Echo :</label>
-		<input id="classe_eco" type="text" name="classe_eco" placeholder="classe eco"/>
+		<input id="classe_eco" type="number" name="classe_eco" placeholder="classe eco"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="classe_business">Classe Business :</label>
-		<input id="classe_business" type="text" name="classe_business" placeholder="classe business"/>
+		<input id="classe_business" type="number" name="classe_business" placeholder="classe business"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="premiere_classe">Premiere Classe :</label>
-		<input id="premiere_classe" type="text" name="premiere_classe" placeholder="premiere classe"/>
+		<input id="premiere_classe" type="number" name="premiere_classe" placeholder="premiere classe"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="date">Date :</label>
-		<input id="date" type="text" name="date" placeholder="date"/>
+		<input id="date" type="date" name="date" placeholder="date"/>
 	</div>
-	<div>
+	<div class="recherche">
 		<label for="resume">Résumer :</label>
 		<textarea name="resume"></textarea>
 	</div>
+	<div class="recherche">
+		<label for="date">url :</label>
+		<input id="date" type="url" name="url" placeholder="http://"/>
+	</div>
+
+	<div class="recherche">
 		<button type="submit" name="submit">envoyer</button>
+	</div>
 </form>
 

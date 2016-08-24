@@ -5,6 +5,8 @@
 		
 	$depart = "";
 	$destination = "";
+	$choixdepart = "";
+	$choixdestination = "";
  
 
 	if (!isset($_POST['depart']))
@@ -26,18 +28,16 @@
 	$json = file_get_contents('voyage.json');
 	$temp = json_decode($json, true);
 	$list = [];
+<<<<<<< HEAD
 	foreach ($temp as $voyage) {
 		  
 		if ($voyage['depart'] == $depart && $voyage['destination'] == $destination) {
+=======
+>>>>>>> 90d72e0d4cd810c72a552ed4dc4b159410c78da2
 	
-			$list[] = $voyage;
-		} else {
-			$error = "Aucun départ ou destination n'est répertorié ";
-		}
-	}
-
 	$i = 0;
 	
+<<<<<<< HEAD
 	$choixdepart = "";
 	$choixdestination = "";
 	
@@ -65,6 +65,32 @@
 		
 		$i++;
 		
+=======
+	// var_dump($_POST['depart'], $_POST['destination']);
+
+	while ($i < sizeof($temp)) {
+		if ($temp[$i]['depart'] == $depart && $temp[$i]['destination'] == $destination) {
+			$list[] = $temp;
+			$nom = $temp[$i]['nom'];
+			$date = $temp[$i]['date'];
+			$resume = $temp[$i]['resume'];
+			$prix = $temp[$i]['prix'];
+		} 
+
+		$collect[] = get_fields();
+		var_dump($collect);
+		
+		$choixdepart .= "<option>" . $temp[$i]['depart'] . "</option>\n";
+		$choixdestination .= "<option>" . $temp[$i]['destination'] . "</option>\n";
+		
+		$i++;
+	}
+
+
+
+	if (empty($list)) {
+		$error = " Aucun départ ou destination n'est répertoriée";
+>>>>>>> 90d72e0d4cd810c72a552ed4dc4b159410c78da2
 	}
 	
 

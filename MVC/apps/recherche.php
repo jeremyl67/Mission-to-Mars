@@ -13,7 +13,6 @@
 		$depart = $_POST['depart'];
 	}
 
-	// var_dump($depart);
 
 	if (!isset($_POST['destination']))
 	{
@@ -29,7 +28,6 @@
 	
 	$i = 0;
 	
-	// var_dump($_POST['depart'], $_POST['destination']);
 
 	while ($i < sizeof($temp)) {
 		if ($temp[$i]['depart'] == $depart && $temp[$i]['destination'] == $destination) {

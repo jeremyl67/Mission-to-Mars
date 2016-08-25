@@ -142,8 +142,7 @@ nav{
 }
 
 nav a{
-	transition: all 0.2s !important;
-	transition: linear 0.2s !important;
+	
 	color: white;
 	padding: 6px 14px;
 	background: rgb(210,70,35);
@@ -158,8 +157,18 @@ nav a{
 	border-style:solid;
 	border-color: rgb(170,20,0);
 	transform: matrix(-0.5,0.8,0.0,0.0,0,0);	
+	transition: all 0.2s linear 0.2s;
+
 }
 
+#transform{
+	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	-webkit-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	o-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+}
+
+}
 nav a:hover{
 	background: rgb(255,220,215);
 	background: -webkit-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));

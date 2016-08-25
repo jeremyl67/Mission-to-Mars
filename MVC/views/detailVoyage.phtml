@@ -1,0 +1,23 @@
+<h1 style="color:#000;"><?=$voyage['nom']?></h1>
+
+<p class="lead">
+    date du voyage : <a href="#"><?=$voyage['date']?></a>
+</p>
+
+<p>Départ : <span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
+
+<hr>
+
+<p>Destination : <span class="glyphicon glyphicon-time"></span><?=$voyage['destination']?></p>
+
+<hr>
+
+<p>Prix du voyage : <?=$voyage['prix'] . ".00 €" ?></p>
+
+<hr>
+
+<p>Résumé du voyage : <?=$voyage['resume']?></p>
+
+<a class="btn btn-primary" href="index.php?page=article&id=<?=$destination?>">En savoir plus</a>
+
+<hr>

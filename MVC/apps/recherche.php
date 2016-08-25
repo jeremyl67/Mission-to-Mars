@@ -1,4 +1,5 @@
 <?php 
+
 	$json = file_get_contents('voyage.json');
 	$temp = json_decode($json, true);
 	$list = [];
@@ -33,10 +34,9 @@
 
 	
 		
+
 	$depart = "";
 	$destination = "";
-	$choixdepart = "";
-	$choixdestination = "";
  
 
 	if (!isset($_POST['depart']))
@@ -81,6 +81,7 @@
 		$error = " Aucun départ ou destination n'est répertoriée";
 
 	}
+
 	
 
 	require 'views/recherche.phtml'; 

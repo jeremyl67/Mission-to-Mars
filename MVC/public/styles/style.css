@@ -65,6 +65,7 @@ img{
 
 .img{
 	border: 1px #fff solid;
+	box-shadow:  0px 0px 1em rgb(20,0,0);
 }
 
 .img_article{
@@ -75,7 +76,13 @@ img{
 
 .white{
 	color: #fff;
-	font-size: 19px; 
+	font-size: 19px;	
+}
+
+.left_white{
+	color: #fff;
+	font-size: 19px;
+	text-align: left;
 }
 
 .color{
@@ -135,6 +142,7 @@ nav{
 }
 
 nav a{
+	
 	color: white;
 	padding: 6px 14px;
 	background: rgb(210,70,35);
@@ -148,10 +156,19 @@ nav a{
 	border-width:6px;
 	border-style:solid;
 	border-color: rgb(170,20,0);
-	transform:matrix(-0.5,0.8,0.0,0.0,0,0);
+	transform: matrix(-0.5,0.8,0.0,0.0,0,0);	
 	transition: all 0.2s linear 0.2s;
+
 }
 
+#transform{
+	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	-webkit-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	o-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
+}
+
+}
 nav a:hover{
 	background: rgb(255,220,215);
 	background: -webkit-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
@@ -177,9 +194,9 @@ article{
 
 .mini_article{
 	display: inline-block;
-	width: 40%;
-	overflow: hidden;
-	margin-right: 80px;
+	width: 30%;
+	float: left;
+	margin-right: 10px;
 }
 
 .info{
@@ -239,6 +256,8 @@ article{
 
 input{
 	margin-bottom: 20px;
+
+
 }
 
 select{

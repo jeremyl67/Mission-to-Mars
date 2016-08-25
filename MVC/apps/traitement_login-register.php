@@ -41,9 +41,7 @@
 			$cp = $_POST['cp'];
 			$ville = $_POST['ville'];
 			$tel = $_POST['tel'];
-			
-			// var dump pour vérifier le passage dans la boucle
-			// var_dump($email);
+	
 
 			if (empty($email)) {
 				$error = " Merci de remplir le champ email";

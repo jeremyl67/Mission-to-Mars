@@ -18,8 +18,8 @@
 
 	if (empty($voyage)) {
 		$error = " Aucun départ ou destination n'est répertoriée";
-	}
-	else
+	} else {
 		require 'views/detailVoyage.phtml';
-
+	}
+	
 ?>

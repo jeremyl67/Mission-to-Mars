@@ -1,0 +1,217 @@
+/*CENTAURI STELLAIRE*/
+/* structure */
+body{
+	font-family: "Titillium Web", Arial, helvetica, sans-serif, serif;
+	margin: 0;
+	text-align: center;
+	background: black;
+    background-repeat:no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	text-align: left;
+	font-weight: normal;
+	font-size: 40px;
+	margin: 0px 0px 0px 10px;
+	color: #fff;
+}
+
+h2{
+	text-align: left;
+	font-weight: normal;
+	font-size: 30px;
+	margin: 0px 0px 40px 10px;
+	color: #fff;
+}
+
+h3{
+	background: #fff;
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	padding: 30px 10px;
+}
+
+nav a:hover{
+	
+	background: white;
+	color: #ff0000;
+	text-decoration: none;
+}
+
+img{
+	max-width: 100%;
+	display: block;	
+}
+
+.img{
+	border: 1px #fff solid;
+}
+
+.img_article{
+	float: left;
+	width: 190px;
+	margin: 10px;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+.white{
+	color: #fff;
+}
+
+.color{
+	padding-left: 10px;
+}
+
+main, .container{
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #fff;
+}
+/*--header--------------------------------------------*/
+header{
+	margin: 0;
+	margin-bottom: 30px;
+	background-image: url("../images/background.jpg");
+	border-left: 1px #fff solid;
+	border-right: 1px #fff solid;
+}
+
+.logo{
+	display: block;
+	width: 400px;
+	float: left;
+	margin-top: -69px;
+	margin-left: -100px;
+}
+/*--nav--------------------------------------------*/
+nav{
+	display: block;
+	background: #ff0000;
+	padding-right: 180px;
+}
+
+.nav li{
+	display: inline-block;
+	font-size: 20px;
+	padding: 30px 10px;
+	color: #fff;
+}
+
+
+/*--article--------------------------------------------*/
+article{
+	clear: both;
+}
+
+.article{
+	display: block;
+	width: 80%;
+	text-align: left;
+	float: left;
+	padding: 25px 25px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.mini_article{
+	display: inline-block;
+	width: 40%;
+	overflow: hidden;
+	margin-right: 80px;
+}
+
+.info{
+	display: block;
+	background: #ff0000;
+	width: 20%;
+	text-align: left;
+	float: right;
+	padding: 30px 10px;
+	border-right: 1px #fff solid;
+	margin-bottom: 30px;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.cGV{
+	border-size:2px;
+	border-radius:5px;
+	margin:20px;
+	box-shadow:  inset 1px 1px 1em rgb(50,50,50);
+}
+
+.floatLeft{
+	display:inline-block;
+	float:left;
+}
+
+.floatRight{
+	display:inline-block;
+	float:right;
+}
+
+/*--footer--------------------------------------------*/
+footer{
+	clear: both;
+	display: block;
+	background: #ff0000;
+	padding: 10px 0;
+	margin: 0;
+	color: #fff;
+	border-left: 1px #fff solid;
+	border-right: 1px #fff solid;
+}
+
+/*--formulaire--------------------------------------------*/
+.register{
+	float: right;
+	text-align: right;
+	width: 40%;
+	padding: 20px 200px 40px 0px;
+	margin-bottom: 20px;
+}
+
+.login{
+	float: left;
+	text-align: right;
+	width: 40%;
+	padding: 20px 0px 40px 200px;
+}
+
+button{
+	margin-top: 20px;
+}
+/*--tablette-version--------------------------------------------*/
+@media screen and (max-width:950px){
+	
+}
+
+/*--mobile-version--------------------------------------------*/
+@media screen and (max-width:750px){
+	
+}

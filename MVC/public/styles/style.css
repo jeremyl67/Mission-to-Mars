@@ -70,13 +70,12 @@ img{
 
 .img_article{
 	float: left;
-	width: 190px;
-	margin: 10px;
+	width: 270px;
 }
 
 .white{
 	color: #fff;
-	font-size: 19px;	
+	font-size: 15px;	
 }
 
 .left_white{
@@ -141,8 +140,7 @@ nav{
 	color: #fff;
 }
 
-nav a{
-	
+nav ul li a{
 	color: white;
 	padding: 6px 14px;
 	background: rgb(210,70,35);
@@ -155,20 +153,10 @@ nav a{
 	border-radius: 10px;	
 	border-width:6px;
 	border-style:solid;
-	border-color: rgb(170,20,0);
-	transform: matrix(-0.5,0.8,0.0,0.0,0,0);	
+	border-color: rgb(170,20,0);	
 	transition: all 0.2s linear 0.2s;
-
 }
 
-#transform{
-	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
-	-webkit-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
-	o-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
-	-moz-transform: transform:matrix(0.01,0.02,0.0,0.0,0,0);
-}
-
-}
 nav a:hover{
 	background: rgb(255,220,215);
 	background: -webkit-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
@@ -176,6 +164,7 @@ nav a:hover{
 	background: -moz-linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
 	background: linear-gradient(rgb(255,190,155), rgb(255,110,75), rgb(255,190,155));
 	color: rgb(150,25,5);
+	box-shadow:  inset 0px 0px 0.6em rgb(140,0,0),  0px 0px 0.6em rgb(0,0,0);
 }
 /*--article--------------------------------------------*/
 article{
@@ -187,7 +176,8 @@ article{
 	width: 80%;
 	text-align: left;
 	float: left;
-	padding: 25px 25px;
+	padding: 0px 25px 25px 25px;
+	margin-bottom: 10px;
 	background: #fff;
 	overflow: hidden;
 }
@@ -197,6 +187,7 @@ article{
 	width: 30%;
 	float: left;
 	margin-right: 10px;
+	margin-top:10px;
 }
 
 .info{

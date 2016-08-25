@@ -24,7 +24,7 @@ ul, li{
 
 .centauriTitle{
 	padding-top:80px;
-	padding-left:280px;
+	padding-left:285px;
 }
 
 h1, h2{
@@ -37,6 +37,8 @@ h1{
 	font-weight: normal;
 	font-size: 40px;
 	color: #fff;
+	margin-left: 25px;
+
 }
 
 h2{
@@ -46,21 +48,26 @@ h2{
 }
 
 h3{
+	text-align: left;
+	margin: 15px 0px 0px 0px;
+	font-size: 23px;
 	background-color: white;
 	color: rgb(150,25,5);
+}
+
+p{
+	margin: 8px 20px 10px 0px;
 }
 
 a{
 	text-decoration: none;
 }
 
-nav{
-	margin: 5px;
-}
 
 img{
 	max-width: 100%;
-	display: block;	
+	display: block;
+	margin-top:10px;	
 }
 
 .img{
@@ -75,7 +82,9 @@ img{
 
 .white{
 	color: #fff;
-	font-size: 15px;	
+	font-size: 15px;
+	line-height:20px;
+	text-align:
 }
 
 .left_white{
@@ -85,7 +94,8 @@ img{
 }
 
 .color{
-	padding-left: 10px;
+	margin: 15px 0px;
+	padding-left: 5px;
 
 }
 
@@ -129,8 +139,8 @@ nav{
 	display: block;
 	float: left;
 /*	background: #ff0000;
-*/	padding-left: 180px;
-	margin-bottom: 15px;
+*/	padding-left: 155px;
+	margin-bottom: 10px;
 }
 
 .nav li{
@@ -142,7 +152,7 @@ nav{
 
 nav ul li a{
 	color: white;
-	padding: 6px 14px;
+	padding: 4px 14px 8px 14px;
 	background: rgb(210,70,35);
 	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
@@ -184,9 +194,10 @@ article{
 
 .mini_article{
 	display: inline-block;
+	text-indent: 20px;
 	width: 30%;
 	float: left;
-	margin-right: 10px;
+	margin-right: 20px;
 	margin-top:10px;
 }
 
@@ -196,11 +207,10 @@ article{
 	width: 20%;
 	text-align: left;
 	float: right;
-	padding: 30px 10px;
+	padding: 0px 10px;
 /*	border-right: 1px #fff solid;
 */	margin-bottom: 30px;
 	border-radius: 15px 0px 0px 15px;
-
 	background: rgb(210,70,35);
 	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
@@ -231,7 +241,6 @@ article{
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border-radius: 15px 15px 15px 15px;
-
 	background: rgb(210,70,35);
 	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
@@ -263,10 +272,7 @@ footer{
 	clear: both;
 	display: block;
 	background: #ff0000;
-	padding: 5px 0;
-	margin: 0;
 	color: #fff;
-
 	background: rgb(210,70,35);
 	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
@@ -281,10 +287,110 @@ footer{
 }
 /*--tablette-version--------------------------------------------*/
 @media screen and (max-width:950px){
-	
+
+nav{
+	display: block;
+	float: left;
+/*	background: #ff0000;
+*/	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
+.centauriTitle{
+	padding-top:60px;
+	padding-left:265px;
+}
+
+.article{
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 0px 15px 5px 15px;
+	margin-bottom: -10px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.info{
+	display: block;
+	background: #ff0000;
+	width: 100%;
+	text-align: left;
+	padding: 0px 10px;
+/*	border-right: 1px #fff solid;
+*/	margin-bottom: 30px;
+	border-radius: 15px 0px 0px 15px;
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
+	box-shadow:  0px 0px 0.6em rgb(0,0,0);
+/*	border-radius: 10px;	
+*/	border-width:6px;
+	border-style:solid;
+	border-color: rgb(170,20,0);
+}
+
+img{
+	max-width: 100%;
+	clear: both;
+}
+
 }
 
 /*--mobile-version--------------------------------------------*/
 @media screen and (max-width:750px){
-	
+
+header{
+	padding-bottom: 40px;
+}
+
+nav{
+	width:730px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+	margin-top: 15px;
+}
+
+.nav li{
+	display: block;
+	font-size: 20px;
+	padding: 15px 10px;
+	color: #fff;
+}
+
+.centauriTitle{
+	padding-top:45px;
+	padding-left:285px;
+}
+
+h1, h2{
+	text-align: left;
+	margin:0;
+	font-style: ;
+}
+
+h1{
+	font-weight: normal;
+	font-size: 25px;
+	color: #fff;
+	margin-left: 25px;
+
+}
+
+h2{
+	font-weight: normal;
+	font-size: 20px;
+	color: #fff;
+}
+
+h3{
+	background-color: white;
+	color: rgb(150,25,5);
+	font-size: 20px;
+}
+
+
 }

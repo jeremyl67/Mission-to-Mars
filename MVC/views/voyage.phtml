@@ -1,35 +1,33 @@
+<?=$error?>
+<img src="<?=$voyage["url"]?>">
+<h1 style="color:#000;"><?=$voyage['nom']?></h1>
 
+<p class="lead">
+    date du voyage <a href="#"><?=$voyage['date']?></a>
+</p>
 
-	<?=$error?>
-	<img src="<?=$voyage["url"]?>">
-	<h1 style="color:#000;"><?=$voyage['nom']?></h1>
+<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
 
-	<p class="lead">
-	    date du voyage <a href="#"><?=$voyage['date']?></a>
-	</p>
+<hr>
 
-	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
+<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=$voyage['destination']?></p>
 
-	<hr>
+<hr>
 
-	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=$voyage['destination']?></p>
+<p>Prix du voyage : <?=$voyage['prix']?></p>
 
-	<hr>
+<hr>
 
-	<p>Prix du voyage : <?=$voyage['prix']?></p>
+<p>Résumé du voyage : <?=$voyage['resume']?></p>
+<form method="POST" action="index.php?page=erase">
+	<input type="hidden" name="id" value="<?=$voyage['id']?>">
+	<button  type="submit" name="action" value="erase">erase</button>
 
-	<hr>
+</form>
+<form method="GET">
+	<input type="hidden" name="page" value="creation">
+	<input type="hidden" name="id" value="<?=$voyage['id']?>">
+	<button  type="submit">edit</button>
+</form>
 
-	<p>Résumé du voyage : <?=$voyage['resume']?></p>
-	<form method="POST" action="index.php?page=erase">
-		<input type="hidden" name="id" value="<?=$voyage['id']?>">
-		<button  type="submit" name="action" value="erase">erase</button>
-
-	</form>
-	<form method="GET">
-		<input type="hidden" name="page" value="creation">
-		<input type="hidden" name="id" value="<?=$voyage['id']?>">
-		<button  type="submit">edit</button>
-	</form>
-
-	<hr>
+<hr>

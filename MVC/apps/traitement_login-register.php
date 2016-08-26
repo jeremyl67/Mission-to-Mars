@@ -1,6 +1,6 @@
 <?php 
 	
-	if(isset($_REQUEST['login'])) {
+	if(isset($_POST['login'])) {
 		if(isset($_POST['email'], $_POST['password'])) {
 
 			$email = $_POST['email'];
@@ -13,13 +13,12 @@
 			} else {
 				$bien = " Tout se passe bien pour le moment ! ";
 
-				$json = file_get_contents('users.json');
-				$temp = json_decode($json, true);
+				$res = mysqli_query($db, "SELECT email, password FROM users");
 
-				foreach ($temp as $val) {
-					if ($val['email'] == $email && $val['pwd'] == $password) {
+				while ($array = mysqli_fetch_assoc($res)) {
+					if ($array['email'] == $email && $array['password']) {
 						$_SESSION['email'] = $email;
-						header("Location: index.php?page=home");
+						header('Location: index.php?page=home');
 						exit;
 					} else {
 						$error = " l'email ou le mot de passe ne sont incorrects";
@@ -29,7 +28,7 @@
 		}
 	}
 
-	if(isset($_REQUEST['register'])) {
+	if(isset($_POST['register'])) {
 		if(isset($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['password'], $_POST['password2'], $_POST['adresse'], $_POST['cp'], $_POST['ville'], $_POST['tel'])) {
 
 			$email = $_POST['email'];
@@ -66,23 +65,29 @@
 			} else {
 				$bien = 'tout va bien jusque la';
 
-				$json = file_get_contents('users.json');
-				$temp = json_decode($json, true);
+				$connect = mysqli_query($db, "SELECT email, nom, prenom, rue, code_postal, ville, tel, password FROM users");
+				$array = mysqli_fetch_assoc($connect);
 
-				array_push($temp, array(
-									'email' => $email, 
-									'nom' => $nom, 
-									'prenom' => $prenom, 
-									'adresse' => $adresse, 
-									'cp' => $cp,
-									'ville' => $ville,
-									'tel' => $tel,
-									'pwd' => $password
-									));
-
-				$json_data = json_encode($temp);
-				file_put_contents('users.json', $json_data);
-				
+				if ($array == true) {
+					$insert = 
+						mysqli_query(
+							$db, "INSERT INTO users (email,
+													nom,
+													prenom,
+													rue,
+													code_postal,
+													tel,
+													ville,
+													password) 
+										VALUES ('$email',
+												'$nom',
+												'$prenom',
+												'$adresse',
+												'$cp',
+												'$tel',
+												'$ville',
+												MD5('$password'))");
+				}
 			} 
 		}
 	}

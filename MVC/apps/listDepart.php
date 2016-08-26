@@ -1,19 +1,13 @@
 <?php 
 
-	$count = 0;
-	$listDepart = [];
+	$res = mysqli_query($db,' SELECT DISTINCT depart FROM voyage' );
+	$text="";
+
+	while ($voyage = mysqli_fetch_assoc($res))
+{
+			$text = $voyage['depart'];
+			require 'views/select.phtml';
 	
-	$json = file_get_contents('voyage.json');
-	$temp = json_decode($json, true);
-
-	while ($count < sizeof($temp)) {
-		if (!in_array($temp[$count]['depart'], $listDepart)) {
-			$listDepart[] = $temp[$count]['depart'];
-			$text = $temp[$count]['depart'];
-		}
-		require 'views/select.phtml';
-		$count++;
-	}
-
+}
 
 ?>

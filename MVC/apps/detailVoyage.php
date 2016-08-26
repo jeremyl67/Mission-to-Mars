@@ -1,24 +1,23 @@
 <?php 
-
 	$count = 0;
 	$voyage;
+	
+	
+		$res = mysqli_query($db,' SELECT * FROM voyage WHERE depart="'.$_POST['depart'].'" AND destination="'.$_POST['destination'].'"');
+	
+	
 
+	$voyage = mysqli_fetch_assoc($res);
 
-	$json = file_get_contents('voyage.json');
-	$temp = json_decode($json, true);
+		
+	
 
-	while ($count < sizeof($temp)) {
-		if ($temp[$count]['depart'] == $depart && $temp[$count]['destination'] == $destination) {
-			$voyage = $temp[$count];
-		}
-			
-		$count++;
-	}
-
-
-	if (empty($voyage)) {
+	if (empty($voyage)) 
+	{
 		$error = " Aucun départ ou destination n'est répertoriée";
-	} else {
+	} 
+	else 
+	{
 		require 'views/detailVoyage.phtml';
 	}
 	

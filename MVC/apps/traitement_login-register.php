@@ -1,12 +1,6 @@
 <?php 
-<<<<<<< HEAD
 if(isset($_REQUEST['login'])) {
 	if(isset($_POST['email'], $_POST['password'])) {
-=======
-	
-	if(isset($_POST['login'])) {
-		if(isset($_POST['email'], $_POST['password'])) {
->>>>>>> bf4d777ad4bbb0294746721e2a31187579b8ba14
 
 		$email = $_POST['email'];
 		$password = $_POST['password'];
@@ -17,7 +11,6 @@ if(isset($_REQUEST['login'])) {
 			$error = " Merci de remplir le champ password";
 		} else {
 
-<<<<<<< HEAD
 			$res = mysqli_query($db,' SELECT * FROM users WHERE email="'.$_POST['email'].'" AND password=MD5("'.$_POST['password'].'")');
 			$voyage = mysqli_fetch_assoc($res);
 			if (!$voyage) {
@@ -31,31 +24,13 @@ if(isset($_REQUEST['login'])) {
 				$_SESSION['email'] = $voyage['email'];
 				header("Location: index.php?page=home");
 				exit;
-=======
-				$res = mysqli_query($db, "SELECT email, password FROM users");
-
-				while ($array = mysqli_fetch_assoc($res)) {
-					if ($array['email'] == $email && $array['password']) {
-						$_SESSION['email'] = $email;
-						header('Location: index.php?page=home');
-						exit;
-					} else {
-						$error = " l'email ou le mot de passe ne sont incorrects";
-					}
-				}
->>>>>>> bf4d777ad4bbb0294746721e2a31187579b8ba14
 			} 
 		}
 	} 
 }
 
-<<<<<<< HEAD
 if(isset($_REQUEST['register'])) {
 	if(isset($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['password'], $_POST['password2'], $_POST['adresse'], $_POST['cp'], $_POST['ville'], $_POST['tel'])) {
-=======
-	if(isset($_POST['register'])) {
-		if(isset($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['password'], $_POST['password2'], $_POST['adresse'], $_POST['cp'], $_POST['ville'], $_POST['tel'])) {
->>>>>>> bf4d777ad4bbb0294746721e2a31187579b8ba14
 
 		$email = $_POST['email'];
 		$nom = $_POST['nom'];
@@ -70,7 +45,6 @@ if(isset($_REQUEST['register'])) {
 		$rue=$adresse;
 
 
-<<<<<<< HEAD
 		if (empty($email)) {
 			$error = " Merci de remplir le champ email";
 		} else if (empty($nom)) {
@@ -102,33 +76,6 @@ if(isset($_REQUEST['register'])) {
 			
 			
 		} 
-=======
-				$connect = mysqli_query($db, "SELECT email, nom, prenom, rue, code_postal, ville, tel, password FROM users");
-				$array = mysqli_fetch_assoc($connect);
-
-				if ($array == true) {
-					$insert = 
-						mysqli_query(
-							$db, "INSERT INTO users (email,
-													nom,
-													prenom,
-													rue,
-													code_postal,
-													tel,
-													ville,
-													password) 
-										VALUES ('$email',
-												'$nom',
-												'$prenom',
-												'$adresse',
-												'$cp',
-												'$tel',
-												'$ville',
-												MD5('$password'))");
-				}
-			} 
-		}
->>>>>>> bf4d777ad4bbb0294746721e2a31187579b8ba14
 	}
 }
 

@@ -8,7 +8,6 @@
 	
 		
 
-
 	$depart = "";
 	$destination = "";
  
@@ -28,13 +27,9 @@
 		$destination = $_POST['destination'];
 	}
 
-
 	require 'views/recherche.phtml'; 
 
 	
 	
 
-
-	
-
-	
+?>

@@ -15,7 +15,8 @@
 		"destinations", 
 		"billets",
 		"logout",
-		"voyage"];
+		"voyage",
+		"tarif"];
 	$db= mysqli_connect("localhost","root","troiswa","centauri");
 
 	

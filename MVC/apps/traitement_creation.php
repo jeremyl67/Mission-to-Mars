@@ -27,45 +27,45 @@
 		if ( empty($_POST["nom"]))
 		{ 
 			$error="l'entrée nom est vide";
-			require "apps/error.php";
+			
 			
 			
 		}
 		elseif ( empty($_POST["date"]))
 		{ 
 			$error="l'entrée date est vide";
-			require "apps/error.php";
+			
 			
 			
 		}
 		elseif ( empty($_POST["resume"]))
 		{ 
 			$error="l'entrée resume est vide";
-			require "apps/error.php";
+			
 			
 			
 		}
 		elseif ( empty($_POST["depart"]))
 		{ 
 			$error="l'entrée  depart est vide";
-			require "apps/error.php";
+			
 			
 		}
 		else if (empty($_POST["destination"]))
 		{
 			$error="l'entrée  desyination est vide";
-			require "apps/error.php";
+			
 		}
 		else if (empty($_POST["prix"]) && (gettype($_POST["prix"])!="integer"||gettype($_POST["prix"])!="double"))
 		{
 			$error="l'entrée prix est vide et/ou ce ne sont pas des nombres";
-			require "apps/error.php";
+			
 			
 		}
 		else if(empty($_POST["classe_eco"])&&empty($_POST["classe_business"])&&empty($_POST["premiere_classe"]))
 		{
 			$error="vous n'avez pas choisi votre classe";
-			require "apps/error.php";
+			
 		}
 		if (empty($error))
 		{

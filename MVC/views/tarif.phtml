@@ -15,11 +15,11 @@
 <hr>
 <input type="hidden" name="action">
 <p>Prix du voyage : <?=$voyage['prix'] . ".00 €" ?></p>
-	<p>Prix classe eco : <?=$voyage["classe_eco"]?></p>
+	<p>Prix classe eco : <?=$voyage["classe_eco"]. ".00 €"?></p>
 	<button type="submit">acheter</button>
-	<p>Prix classe business : <?=$voyage["classe_business"]?></p>
+	<p>Prix classe business : <?=$voyage["classe_business"]. ".00 €"?></p>
 	<button type="submit">acheter</button>
-	<p>Prix premiere classe : <?=$voyage["premiere_classe"]?></p>
+	<p>Prix premiere classe : <?=$voyage["premiere_classe"]. ".00 €"?></p>
 	<button type="submit" name="premiere_classe" value="1">acheter</button>
 
 <hr>

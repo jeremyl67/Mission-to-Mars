@@ -19,8 +19,8 @@ if(isset($_REQUEST['login'])) {
 			else
 			{
 				$bien = " Tout se passe bien pour le moment ! ";
-				
-
+				$_SESSION["id"] = $voyage["id"];
+				$_SESSION["admin"] = $voyage["admin"];
 				$_SESSION['email'] = $voyage['email'];
 				header("Location: index.php?page=home");
 				exit;

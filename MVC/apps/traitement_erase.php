@@ -1,24 +1,16 @@
 <?php
-if (isset($_POST['action']))
+
+if (isset($_POST['action'], $_POST['id']) && $_POST['action'] == 'erase')
 {
+	$id = $_POST['id'];
+	$query = "DELETE FROM voyage WHERE id=".$id;
+	mysqli_query($db, $query);
 	
-	$json=file_get_contents("voyage.json");
-	$stock = json_decode($json, true);
-	$id = $_POST["id"];
-	$i = 0;
-	while($i < sizeof($stock))
-	{
-		if($stock[$i]["id"] == $id)
-		{
-			array_splice($stock, $i, 1);
-
-			$stock=json_encode($stock);
-			$stock=file_put_contents("voyage.json", $stock);
-		}
-
-	$i++;
-	}
 	header("Location: index.php?page=voyage");
 	exit;
+
+		header("Location: index.php?page=voyage");
+		exit;
+
 }
 ?>

@@ -1,5 +1,13 @@
 <?php 
+
 	
+	$choixdepart = "";
+	$choixdestination = "";
+	
+	
+	
+		
+
 
 	$depart = "";
 	$destination = "";
@@ -19,7 +27,14 @@
 	} else {
 		$destination = $_POST['destination'];
 	}
-	
+
 
 	require 'views/recherche.phtml'; 
-?>
+
+	
+	
+
+
+	
+
+	

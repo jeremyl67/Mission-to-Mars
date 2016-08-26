@@ -1,16 +1,12 @@
 <?php
+		$res = mysqli_query($db,' SELECT * FROM voyage' );
+	$text="";
 
-	$json = file_get_contents('voyage.json');
-	$temp = json_decode($json, true);
-	$voyage =[];
-	
-	$i=0;
-	while ($i<sizeof($temp))
+	while ($voyage = mysqli_fetch_assoc($res))
 	{
-		$voyage=$temp[$i];
-
-		$i++;
-	require ("views/voyage.phtml");
+		
+		require 'views/voyage.phtml';
+		
 	}
 		
 ?>

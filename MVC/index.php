@@ -16,6 +16,7 @@
 		"billets",
 		"logout",
 		"voyage"];
+	$db= mysqli_connect("localhost","root","troiswa","centauri");
 
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $access))

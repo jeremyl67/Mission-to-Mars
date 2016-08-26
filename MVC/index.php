@@ -1,6 +1,9 @@
 <?php
 	//var_dump($_POST);
 	session_start();
+	$db = mysqli_connect("localhost", "root", "troiswa", "centauri");
+
+
 	$erase="";
 	$error = '';
 	$page = 'home';

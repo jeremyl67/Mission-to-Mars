@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 25 Août 2016 à 11:30
+-- Généré le: Jeu 25 Août 2016 à 16:52
 -- Version du serveur: 5.5.49-0ubuntu0.14.04.1
 -- Version de PHP: 5.5.9-1ubuntu4.17
 
@@ -39,7 +39,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `ville` varchar(63) COLLATE utf8_bin NOT NULL,
   `tel` varchar(15) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`, `birthdate`, `admin`, `nom`, `prenom`, `rue`, `code_postal`, `ville`, `tel`) VALUES
+(1, 'robert.delabuche@gmail.com', '17dd465a5cfccd02cff3ca53379e1cbf', '1950-08-17', 1, 'Robert', 'André', '20 RUE DES TUILES', '67000', 'STRASBOURG', '0388888888'),
+(2, 'ursule.bidochon@gmail.com', '4a5f91d922959310ab68d6fa494745d6', '1965-08-12', 0, 'Ursule', 'Bidochon', '14 ROUTE DES POIDS MORTS', '67800', 'BISCHHEIM', '0605050505');
 
 -- --------------------------------------------------------
 
@@ -57,8 +65,21 @@ CREATE TABLE IF NOT EXISTS `voyage` (
   `classe_business` int(6) unsigned NOT NULL,
   `premiere_classe` int(6) unsigned NOT NULL,
   `url` varchar(255) COLLATE utf8_bin NOT NULL,
+  `nom` varchar(63) COLLATE utf8_bin NOT NULL,
+  `resume` varchar(1023) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `voyage`
+--
+
+INSERT INTO `voyage` (`id`, `destination`, `depart`, `date`, `prix`, `classe_eco`, `classe_business`, `premiere_classe`, `url`, `nom`, `resume`) VALUES
+(1, 'Uranus', 'Strasbourg', '2050-08-01', 12000, 1200, 600, 300, 'http://imgur.com', 'La flute de Faress', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis!'),
+(2, 'Pluton', 'Paris', '3020-05-23', 16000, 1600, 800, 400, 'http://imgur.com', '20 000 lieux sous la schneck', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis!'),
+(3, 'Soleil', 'Mars', '2080-01-31', 231344, 1321564, 321231, 1324154, 'http://imgur.com', 'Le règne des glaces', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis!'),
+(4, 'Galactica', 'Andromède', '2080-01-31', 231344, 1321564, 321231, 1324154, 'http://imgur.com', 'La croisière s''amuse', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis!'),
+(5, 'Lion', 'Neptune', '2080-01-31', 231344, 1321564, 321231, 1324154, 'http://imgur.com', 'Une virée vers l''infinie', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure, deserunt vel? Nostrum sunt dolorem quas, nesciunt sapiente enim aliquam accusamus eum excepturi. Aperiam recusandae enim quasi itaque adipisci? Nobis!');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

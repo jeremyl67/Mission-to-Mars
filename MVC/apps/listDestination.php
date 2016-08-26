@@ -1,5 +1,6 @@
 <?php 
 
+
 	$res = mysqli_query($db,' SELECT DISTINCT destination FROM voyage' );
 	$text="";
 
@@ -9,6 +10,7 @@
 			require 'views/select.phtml';
 	
 }
+
 
 
 ?>

@@ -1,32 +1,32 @@
 
 <form method="post" action="index.php?page=pdf">
-<h1 style="color:#000;"><?=$voyage['nom']?></h1>
+<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
 <p class="lead">
-    date du voyage : <a href="#"><?=$voyage['date']?></a>
+    date du voyage : <a href="#"><?=htmlentities($voyage['date'])?></a>
 </p>
 
-<p>Départ : <span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
+<p>Départ : <span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
 
 <hr>
 
-<p>Destination : <span class="glyphicon glyphicon-time"></span><?=$voyage['destination']?></p>
+<p>Destination : <span class="glyphicon glyphicon-time"></span><?=htmlentities($voyage['destination'])?></p>
 
 <hr>
 <input type="hidden" name="action">
-<p>Prix du voyage : <?=$voyage['prix'] . ".00 €" ?></p>
-	<p>Prix classe eco : <?=$voyage["classe_eco"]. ".00 €"?></p>
+<p>Prix du voyage : <?=htmlentities($voyage['prix']) . ".00 €" ?></p>
+	<p>Prix classe eco : <?=htmlentities($voyage["classe_eco"]). ".00 €"?></p>
 	<button type="submit">acheter</button>
-	<p>Prix classe business : <?=$voyage["classe_business"]. ".00 €"?></p>
+	<p>Prix classe business : <?=htmlentities($voyage["classe_business"]). ".00 €"?></p>
 	<button type="submit">acheter</button>
-	<p>Prix premiere classe : <?=$voyage["premiere_classe"]. ".00 €"?></p>
+	<p>Prix premiere classe : <?=htmlentities($voyage["premiere_classe"]). ".00 €"?></p>
 	<button type="submit" name="premiere_classe" value="1">acheter</button>
 
 <hr>
 
-<p>Résumé du voyage : <?=$voyage['resume']?></p>
+<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
-<a class="btn btn-primary" href="index.php?page=article&id=<?=$voyage["destination"]?>">En savoir plus</a>
+<a class="btn btn-primary" href="index.php?page=article&id=<?=htmlentities($voyage["destination"])?>">En savoir plus</a>
 
 <hr>
 

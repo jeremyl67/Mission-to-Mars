@@ -2,7 +2,7 @@
 
 if (isset($_POST['action'], $_POST['id']) && $_POST['action'] == 'erase')
 {
-	$id = $_POST['id'];
+	$id = intval($_POST['id']);
 	$query = "DELETE FROM voyage WHERE id=".$id;
 	mysqli_query($db, $query);
 	

@@ -4,11 +4,12 @@
 	$depart;
 	$destination="";
 	$voyage="";
-	if (isset($_POST["depart"] )&& isset($_POST["destination"]))
+	if (isset($_POST["depart"], $_POST["destination"]))
 	{ 
 	
-	
-		$res = mysqli_query($db,' SELECT * FROM voyage WHERE depart="'.$_POST['depart'].'" AND destination="'.$_POST['destination'].'"');
+		$depart=mysqli_real_escape_string($db,$_POST["depart"]);
+		$destination=mysqli_real_escape_string($db,$_POST["destination"]);
+		$res = mysqli_query($db,' SELECT * FROM voyage WHERE depart="'.$depart.'" AND destination="'.$destination.'"');
 		$voyage = mysqli_fetch_assoc($res);
 	}
 

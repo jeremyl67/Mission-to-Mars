@@ -2,7 +2,8 @@
 
 	if (isset($_GET['id']))
 	{
-		$res = mysqli_query($db,' SELECT * FROM voyage WHERE id='.$_GET['id']);
+		$id=intval(($_POST["id"]));
+		$res = mysqli_query($db,' SELECT * FROM voyage WHERE id='.$id);
 	
 
 	$voyage = mysqli_fetch_assoc($res);

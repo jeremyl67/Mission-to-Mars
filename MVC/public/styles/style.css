@@ -1,5 +1,5 @@
 /*CENTAURI STELLAIRE*/
-/* structure */login
+/* structure */
 body{
 	font-family: "Titillium Web", Arial, helvetica, sans-serif, serif;
 	margin: 0;
@@ -235,7 +235,7 @@ article{
 	width: 40%;
 	padding: 20px;
 	margin-left: 100px;
-	margin-top: 40px;
+	margin-top: 50px;
 	margin-bottom: 40px;
 	border-radius: 15px 15px 15px 15px;
 	background: rgb(210,70,35);
@@ -246,15 +246,13 @@ article{
 	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
 	box-shadow:  0px 0px 0.6em rgb(0,0,0);
 	border-radius: 20px 20px 20px 20px;	
-	border-width:6px;
-	border-style:solid;
+	border-width: 6px;
+	border-style: solid;
 	border-color: rgb(170,20,0);
 }
 
 input{
 	margin-bottom: 20px;
-
-
 }
 
 select{

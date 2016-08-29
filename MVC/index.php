@@ -2,6 +2,7 @@
 	//var_dump($_POST);
 	session_start();
 	$db = mysqli_connect("localhost", "root", "troiswa", "centauri");
+	
 
 
 	$erase="";
@@ -16,7 +17,8 @@
 		"billets",
 		"logout",
 		"voyage",
-		"tarif"];
+		"tarif",
+		"comment"];
 	$db= mysqli_connect("localhost","root","troiswa","centauri");
 
 	
@@ -29,7 +31,8 @@
 		"creation",  
 		"login-register", 
 		"logout",
-		"erase"];
+		"erase",
+		"voyage"];
 	
 	if (isset($_GET['page']) && in_array($_GET['page'], $accessTraitement)) {
 		require 'apps/traitement_'.$_GET['page'].'.php';

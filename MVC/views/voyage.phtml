@@ -19,6 +19,18 @@
 <hr>
 
 <p>Résumé du voyage : <?=$voyage['resume']?></p>
+<hr>
 <?php require "apps/voyage_admin.php";?>
+<?php require "apps/comment.php";?>
+
+
+<form  method="POST" >
+	
+	<input type="hidden" name="id" value="<?=$voyage["id"]?>">
+	<input type="hidden" name="action" value="comment">
+	<textarea class="form-control" rows="10" name="comment" ></textarea>
+	<button class="btn btn-default" type="submit">Envoyer</button>
+</form>
+
 
 <hr>

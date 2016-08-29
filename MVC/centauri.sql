@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 25 Août 2016 à 16:52
+-- Généré le: Ven 26 Août 2016 à 12:01
 -- Version du serveur: 5.5.49-0ubuntu0.14.04.1
 -- Version de PHP: 5.5.9-1ubuntu4.17
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `ville` varchar(63) COLLATE utf8_bin NOT NULL,
   `tel` varchar(15) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `users`
@@ -47,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `birthdate`, `admin`, `nom`, `prenom`, `rue`, `code_postal`, `ville`, `tel`) VALUES
 (1, 'robert.delabuche@gmail.com', '17dd465a5cfccd02cff3ca53379e1cbf', '1950-08-17', 1, 'Robert', 'André', '20 RUE DES TUILES', '67000', 'STRASBOURG', '0388888888'),
-(2, 'ursule.bidochon@gmail.com', '4a5f91d922959310ab68d6fa494745d6', '1965-08-12', 0, 'Ursule', 'Bidochon', '14 ROUTE DES POIDS MORTS', '67800', 'BISCHHEIM', '0605050505');
+(2, 'ursule.bidochon@gmail.com', '4a5f91d922959310ab68d6fa494745d6', '1965-08-12', 0, 'Ursule', 'Bidochon', '14 ROUTE DES POIDS MORTS', '67800', 'BISCHHEIM', '0605050505'),
+(8, 'yves.muller@gmail.com', '6823bea8da9875ac432e36c95701ee80', '0000-00-00', 0, 'Muller', 'Yves', '52 ROUTE DU GENERAL DE GAULLE', '75000', 'PARIS', '0175225566');
 
 -- --------------------------------------------------------
 

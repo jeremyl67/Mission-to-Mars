@@ -277,15 +277,13 @@ article{
 }
 
 .login{
-	float: right;
 	display:inline-block;
-	text-align: right;
 	width: 40%;
 	padding: 20px;
-	margin-left: 100px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	border-radius: 15px 15px 15px 15px;
+	margin-left: 100px;
 /*	background: rgb(210,70,35);
 /*	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));

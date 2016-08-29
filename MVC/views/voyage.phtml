@@ -1,6 +1,6 @@
-<?=$error?>
+<!--<?=$error?>
 <img src="<?=$voyage["url"]?>">
-<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
+<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>-->
 
 <p class="lead">
     date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
@@ -18,8 +18,6 @@
 
 <hr>
 
-
-<p>Résumé du voyage : <?=$voyage['resume']?></p>
 <hr>
 
 <p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
@@ -30,7 +28,7 @@
 
 <form  method="POST" >
 	
-	<input type="hidden" name="id" value="<?=$voyage["id"]?>">
+	<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
 	<input type="hidden" name="action" value="comment">
 	<textarea class="form-control" rows="10" name="comment" ></textarea>
 	<button class="btn btn-default" type="submit">Envoyer</button>

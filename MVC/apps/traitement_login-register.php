@@ -5,12 +5,12 @@ if(isset($_REQUEST['login'])) {
 		$email = mysqli_real_escape_string($db,$_POST['email']);
 		$password = mysqli_real_escape_string($db,$_POST['password']);
 
+
 		if (empty($email)) {
 			$error = " Merci de remplir le champ email";
 		} else if (empty($password)) {
 			$error = " Merci de remplir le champ password";
 		} else {
-
 			$res = mysqli_query($db,' SELECT * FROM users WHERE email="'.$_POST['email'].'" AND password=MD5("'.$_POST['password'].'")');
 			$voyage = mysqli_fetch_assoc($res);
 			if (!$voyage) {
@@ -28,10 +28,8 @@ if(isset($_REQUEST['login'])) {
 		}
 	} 
 }
-
 if(isset($_REQUEST['register'])) {
 	if(isset($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['password'], $_POST['password2'], $_POST['adresse'], $_POST['cp'], $_POST['ville'], $_POST['tel'])) {
-
 		$email = $_POST['email'];
 		$nom = $_POST['nom'];
 		$prenom = $_POST['prenom'];
@@ -43,8 +41,6 @@ if(isset($_REQUEST['register'])) {
 		$tel = $_POST['tel'];
 		$code_postal=$cp;
 		$rue=$adresse;
-
-
 		if (empty($email)) {
 			$error = " Merci de remplir le champ email";
 		} else if (empty($nom)) {
@@ -72,11 +68,9 @@ if(isset($_REQUEST['register'])) {
 			mysqli_query($db, $query);
 			var_dump(mysqli_error($db));
 			$id = mysqli_insert_id($db);
-
 			
 			
 		} 
 	}
 }
-
 ?>

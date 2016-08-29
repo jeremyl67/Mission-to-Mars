@@ -13,16 +13,16 @@
 	$id="";
 	if (isset($_POST["action"]) && $_POST['action'] == 'create' && isset($_POST["nom"], $_POST["depart"])  && isset($_POST["destination"])  && isset($_POST["prix"])  && isset($_POST["classe_eco"]) && isset($_POST["classe_business"]) && isset($_POST["premiere_classe"]) && isset($_POST["date"]) && isset($_POST["resume"]) && isset($_POST["url"]))
 	{
-		$depart=$_POST["depart"];
-		$url=$_POST["url"];
-		$nom=$_POST["nom"];
-		$resume=$_POST["resume"];
+		$depart=mysqli_real_escape_string($db,$_POST["depart"]);
+		$url=mysqli_real_escape_string($db,$_POST["url"]);
+		$nom=mysqli_real_escape_string($db,$_POST["nom"]);
+		$resume=mysqli_real_escape_string($db,$_POST["resume"]);
 		$date=$_POST["date"];
-		$destination=$_POST["destination"];
-		$prix=$_POST["prix"];
-		$classe_eco=$_POST["classe_eco"];
-		$classe_business=$_POST["classe_business"];
-		$premiere_classe=$_POST["premiere_classe"];
+		$destination=mysqli_real_escape_string($db,$_POST["destination"]);
+		$prix=floatval($db,$_POST["prix"]);
+		$classe_eco=intval($_POST["classe_eco"]);
+		$classe_business=intval($_POST["classe_business"]);
+		$premiere_classe=intval($_POST["premiere_classe"]);
 		
 		if ( empty($_POST["nom"]))
 		{ 
@@ -85,17 +85,18 @@
 
 	if ( isset($_POST["action"])&& $_POST['action'] == 'edit' && isset($_POST["nom"])&& isset($_POST["id"]) && isset($_POST["id"])  && isset($_POST["depart"])  && isset($_POST["destination"])  && isset($_POST["prix"])  && isset($_POST["classe_eco"]) && isset($_POST["classe_business"]) && isset($_POST["premiere_classe"]) && isset($_POST["date"]) && isset($_POST["resume"]) && isset($_POST["url"]) )
 	{
-		$nom = $_POST["nom"];
-		$depart = $_POST["depart"];
-		$destination = $_POST["destination"];
-		$prix = $_POST["prix"];
-		$classe_eco = $_POST["classe_eco"];
-		$classe_business = $_POST["classe_business"];
-		$premiere_classe = $_POST["premiere_classe"];
-		$date = $_POST["date"];
-		$resume = $_POST["resume"];
-		$url = $_POST["url"];
-		$id = $_POST["id"];
+		$depart=mysqli_real_escape_string($db,$_POST["depart"]);
+		$url=mysqli_real_escape_string($db,$_POST["url"]);
+		$nom=mysqli_real_escape_string($db,$_POST["nom"]);
+		$resume=mysqli_real_escape_string($db,$_POST["resume"]);
+		$date=$_POST["date"];
+		$destination=mysqli_real_escape_string($db,$_POST["destination"]);
+		$prix=mysqli_real_escape_string($db,$_POST["prix"]);
+		$classe_eco=intval($_POST["classe_eco"]);
+		$classe_business=intval($_POST["classe_business"]);
+		$premiere_classe=intval($_POST["premiere_classe"]);
+		$id=intval($_POST["id"]);
+		
 		
 
 		
@@ -103,9 +104,11 @@
 		
 		$query = "UPDATE voyage SET depart='".$depart."', destination='".$destination."', nom='".$nom."' ,resume='".$resume."' ,date='".$date."' ,prix='".$prix."' ,classe_business='".$classe_business."' ,classe_eco='".$classe_eco."' ,premiere_classe='".$premiere_classe."' ,url='".$url."' WHERE id=".$id;
 		mysqli_query($db, $query);
+		// var_dump($query,mysqli_error($db));
+
 		
-			header("Location: index.php?page=voyage");
- 			exit;	
+		header("Location: index.php?page=voyage");
+		exit;	
 		}
 	
 ?>

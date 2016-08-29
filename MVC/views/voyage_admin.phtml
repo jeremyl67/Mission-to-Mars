@@ -1,0 +1,12 @@
+<div class="disparition">
+	<form method="POST" action="index.php?page=erase">
+		<input type="hidden" name="id" value="<?=$voyage['id']?>"> 
+		<button  type="submit" name="action" value="erase">erase</button>
+
+	</form>
+	<form method="GET">
+		<input type="hidden" name="page" value="creation">
+		<input type="hidden" name="id" value="<?=$voyage['id']?>">
+		<button  type="submit">edit</button>
+	</form>
+</div>

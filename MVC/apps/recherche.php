@@ -16,7 +16,7 @@
 	{
 		$error = 'cocher le sesk wesh';
 	} else {
-		$depart = $_POST['depart'];
+		$depart = mysqli_real_escape_string($db,$_POST['depart']);
 	}
 
 
@@ -24,7 +24,7 @@
 	{
 		$error = 'cocher le sesk wesh';
 	} else {
-		$destination = $_POST['destination'];
+		$destination = mysqli_real_escape_string($db,$_POST['destination']);
 	}
 
 	require 'views/recherche.phtml'; 

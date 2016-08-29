@@ -2,8 +2,8 @@
 if(isset($_REQUEST['login'])) {
 	if(isset($_POST['email'], $_POST['password'])) {
 
-		$email = $_POST['email'];
-		$password = $_POST['password'];
+		$email = mysqli_real_escape_string($db,$_POST['email']);
+		$password = mysqli_real_escape_string($db,$_POST['password']);
 
 		if (empty($email)) {
 			$error = " Merci de remplir le champ email";

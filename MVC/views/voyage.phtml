@@ -1,40 +1,39 @@
-<?=$error?>
-<img src="<?=$voyage["url"]?>">
-<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
+<!-- <?=$error?> --> 
+<!-- <img src="<?=$voyage["url"]?>"> --> 
+<div class="login gradAndBoxShad">
+	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
-<p class="lead">
-    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
-</p>
+	<p class="lead">
+	    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
+	</p>
 
-<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
+	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
 
-<hr>
+	<hr>
 
-<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
+	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
 
-<hr>
+	<hr>
 
-<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
+	<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
 
-<hr>
+	<hr>
 
+	<p>Résumé du voyage : <?=$voyage['resume']?></p>
 
-<p>Résumé du voyage : <?=$voyage['resume']?></p>
-<hr>
-=======
-<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+	<hr>
 
-<?php require "apps/voyage_admin.php";?>
-<?php require "apps/comment.php";?>
+	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
+	<?php require "apps/voyage_admin.php";?>
+	<?php require "apps/comment.php";?>
+</div>
 
-<form  method="POST" >
-	
-	<input type="hidden" name="id" value="<?=$voyage["id"]?>">
-	<input type="hidden" name="action" value="comment">
-	<textarea class="form-control" rows="10" name="comment" ></textarea>
-	<button class="btn btn-default" type="submit">Envoyer</button>
-</form>
-
-
+	<form  method="POST" >
+		
+		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
+		<input type="hidden" name="action" value="comment">
+		<textarea class="form-control" rows="10" name="comment" ></textarea>
+		<button class="btn btn-default" type="submit">Envoyer</button>
+	</form>
 <hr>

@@ -9,8 +9,6 @@ if (isset($_POST['action'], $_POST['id']) && $_POST['action'] == 'erase')
 	header("Location: index.php?page=voyage");
 	exit;
 
-		header("Location: index.php?page=voyage");
-		exit;
-
+		
 }
 ?>

@@ -1,5 +1,5 @@
 /*CENTAURI STELLAIRE*/
-/* structure */
+/* structure */login
 body{
 	font-family: "Titillium Web", Arial, helvetica, sans-serif, serif;
 	margin: 0;
@@ -97,7 +97,7 @@ img{
 	padding-left: 5px;
 }
 
-main, .container{
+ .container{
 	max-width: 1200px;
 	margin: 0 auto;
 	background: #fff;
@@ -121,6 +121,7 @@ header{
 */
 }
 
+
 /*--nav--------------------------------------------*/
 nav{
 	display: block;
@@ -129,6 +130,11 @@ nav{
 */	padding-left: 155px;
 	margin-bottom: 10px;
 }
+nav:after{
+		content:"";
+		clear:both;
+	}
+
 
 .nav li{
 	display: inline-block;
@@ -191,6 +197,7 @@ article{
 	overflow: hidden;
 }
 
+
 .mini_article{
 	display: inline-block;
 	text-indent: 20px;
@@ -231,7 +238,8 @@ article{
 }
 
 .login{
-	float: left;
+	float: right;
+	display:inline-block;
 	text-align: right;
 	width: 40%;
 	padding: 20px;
@@ -308,7 +316,7 @@ footer{
 	margin: 0px;
 	float: none;
 	}
-
+	
 	.nav li{
 	display: flex;
 	flex-direction: column;

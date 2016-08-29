@@ -11,7 +11,7 @@ if(isset($_REQUEST['login'])) {
 		} else if (empty($password)) {
 			$error = " Merci de remplir le champ password";
 		} else {
-			$res = mysqli_query($db,' SELECT * FROM users WHERE email="'.$_POST['email'].'" AND password=MD5("'.$_POST['password'].'")');
+			$res = mysqli_query($db,' SELECT * FROM users WHERE email="'.$email.'" AND password=MD5("'.$password.'")');
 			$voyage = mysqli_fetch_assoc($res);
 			if (!$voyage) {
 				$error = " l'email ou le mot de passe ne sont incorrects";

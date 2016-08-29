@@ -1,53 +1,53 @@
 <div class="login gradAndBoxShad">
 	<form method="post"  autocomplete="off">
-		<input type="hidden" name="id" value="<?=$id?>">
+		<input type="hidden" name="id" value="<?=htmlentities($id)?>">
 		<div class="recherche">
 
 
 
 			<label for="nom">nom :</label>
-			<input id="nom" type="text" name="nom" value="<?=$nom?>"placeholder="nom"/>
+			<input id="nom" type="text" name="nom" value="<?=htmlentities($nom)?>"placeholder="nom"/>
 		</div>
 		<div class="recherche">
 			<label for="depart">Depart :</label>
-			<input id="depart" type="text" name="depart" value="<?=$depart?>"placeholder="Depart"/>
+			<input id="depart" type="text" name="depart" value="<?=htmlentities($depart)?>"placeholder="Depart"/>
 		</div>
 		<div class="recherche">
 			<label for="destination">Destination :</label>
-			<input id="destination" type="text" name="destination" value="<?=$destination?>"placeholder="Destination" />
+			<input id="destination" type="text" name="destination" value="<?=htmlentities($destination)?>"placeholder="Destination" />
 		</div>
 		<div class="recherche">
 			<label for="prix">Prix :</label>
-			<input id="prix" type="number" name="prix" value="<?=$prix?>"placeholder="prix"/>
+			<input id="prix" type="number" name="prix" value="<?=htmlentities($prix)?>"placeholder="prix"/>
 		</div>
 		<div class="recherche">
 			<label for="classe_eco">Classe Echo :</label>
-			<input id="classe_eco" type="number" name="classe_eco" value="<?=$classe_eco?>"placeholder="classe eco"/>
+			<input id="classe_eco" type="number" name="classe_eco" value="<?=htmlentities($classe_eco)?>"placeholder="classe eco"/>
 		</div>
 		<div class="recherche">
 			<label for="classe_business">Classe Business :</label>
-			<input id="classe_business" type="number" name="classe_business" value="<?=$classe_business?>"placeholder="classe business"/>
+			<input id="classe_business" type="number" name="classe_business" value="<?=htmlentities($classe_business)?>"placeholder="classe business"/>
 		</div>
 		<div class="recherche">
 			<label for="premiere_classe">Premiere Classe :</label>
-			<input id="premiere_classe" type="number" name="premiere_classe" value="<?=$premiere_classe?>"placeholder="premiere classe"/>
+			<input id="premiere_classe" type="number" name="premiere_classe" value="<?=htmlentities($premiere_classe)?>"placeholder="premiere classe"/>
 		</div>
 		<div class="recherche">
 			<label for="date">Date :</label>
-			<input id="date" type="date" name="date" value="<?=$date?>"placeholder="date"/>
+			<input id="date" type="date" name="date" value="<?=htmlentities($date)?>"placeholder="date"/>
 		</div>
 		<div class="recherche">
 			<label for="resume">Résumer :</label>
-			<textarea class="margin-bottom" name="resume"><?=$resume?></textarea>
+			<textarea class="margin-bottom" name="resume"><?=htmlentities($resume)?></textarea>
 		</div>
 		<div class="recherche">
 			<label for="date">url :</label>
-			<input id="date" type="url" name="url" value="<?=$url?>"placeholder="http://"/>
+			<input id="date" type="url" name="url" value="<?=htmlentities($url)?>"placeholder="http://"/>
 
 
 		</div>
 		<div class="recherche">
-			<button type="submit" name="action" value="<?=$action?>">envoyer</button>
+			<button type="submit" name="action" value="<?=htmlentities($action)?>">envoyer</button>
 		</div>
 	</form>
 	<?php require 'apps/error.php'; ?>

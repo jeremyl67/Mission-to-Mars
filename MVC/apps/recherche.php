@@ -1,13 +1,5 @@
 <?php 
 
-	
-	$choixdepart = "";
-	$choixdestination = "";
-	
-	
-	
-		
-
 	$depart = "";
 	$destination = "";
  

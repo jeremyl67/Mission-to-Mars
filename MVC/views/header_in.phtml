@@ -9,7 +9,7 @@
 			<nav>
 				<ul class="nav">
 					<li>
-						<a href="index.php?page=home" class="gradAndBoxShad">ACHETER UN BILLET</a>
+						<a href="index.php?page=voyage" class="gradAndBoxShad">NOS VOYAGE</a>
 					</li>
 					<li>
 						<a href="index.php?page=recherche" class="gradAndBoxShad">RECHERCHE</a>
@@ -18,7 +18,7 @@
 						<a href="index.php?page=logout" class="gradAndBoxShad">LOGOUT</a>
 					</li>
 					<li id="navMenuButton">
-						<a href="#" class="gradAndBoxShad"><?=$_SESSION['email']?></a>
+						<a href="#" class="gradAndBoxShad"><?=htmlentities($_SESSION['email'])?></a>
 					</li>
 					<li>
 						<a href="index.php?page=creation" class="gradAndBoxShad">creation</a>

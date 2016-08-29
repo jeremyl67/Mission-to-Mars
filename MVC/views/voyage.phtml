@@ -1,24 +1,24 @@
 <?=$error?>
 <img src="<?=$voyage["url"]?>">
-<h1 style="color:#000;"><?=$voyage['nom']?></h1>
+<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
 <p class="lead">
-    date du voyage <a href="#"><?=$voyage['date']?></a>
+    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
 </p>
 
-<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=$voyage['depart']?></p>
+<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
 
 <hr>
 
-<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=$voyage['destination']?></p>
+<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
 
 <hr>
 
-<p>Prix du voyage : <?=$voyage['prix']?></p>
+<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
 
 <hr>
 
-<p>Résumé du voyage : <?=$voyage['resume']?></p>
+<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 <?php require "apps/voyage_admin.php";?>
 
 <hr>

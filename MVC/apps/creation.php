@@ -2,7 +2,7 @@
 
 	if (isset($_GET['id']))
 	{
-		$id=intval(($_POST["id"]));
+		$id=intval(($_GET["id"]));
 		$res = mysqli_query($db,' SELECT * FROM voyage WHERE id='.$id);
 	
 

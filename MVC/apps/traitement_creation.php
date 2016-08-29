@@ -17,7 +17,7 @@
 		$url=mysqli_real_escape_string($db,$_POST["url"]);
 		$nom=mysqli_real_escape_string($db,$_POST["nom"]);
 		$resume=mysqli_real_escape_string($db,$_POST["resume"]);
-		$date=$_POST["date"];
+		$date=mysqli_real_escape_string($db,$_POST["date"]);
 		$destination=mysqli_real_escape_string($db,$_POST["destination"]);
 		$prix=floatval($db,$_POST["prix"]);
 		$classe_eco=intval($_POST["classe_eco"]);
@@ -89,7 +89,7 @@
 		$url=mysqli_real_escape_string($db,$_POST["url"]);
 		$nom=mysqli_real_escape_string($db,$_POST["nom"]);
 		$resume=mysqli_real_escape_string($db,$_POST["resume"]);
-		$date=$_POST["date"];
+		$date=mysqli_real_escape_string($db,$_POST["date"]);
 		$destination=mysqli_real_escape_string($db,$_POST["destination"]);
 		$prix=mysqli_real_escape_string($db,$_POST["prix"]);
 		$classe_eco=intval($_POST["classe_eco"]);

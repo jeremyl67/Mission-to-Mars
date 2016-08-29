@@ -25,7 +25,14 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `users`
 --
-
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` varchar(63) NOT NULL,
+  `id_voyage` int(11) NOT NULL,
+  `comment` varchar(255) NOT NULL,
+  `note` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(63) COLLATE utf8_bin NOT NULL,

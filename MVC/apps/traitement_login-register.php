@@ -1,5 +1,5 @@
 <?php 
-if(isset($_REQUEST['login'])) {
+if(isset($_POST['login'])) {
 	if(isset($_POST['email'], $_POST['password'])) {
 
 		$email = mysqli_real_escape_string($db,$_POST['email']);
@@ -28,7 +28,7 @@ if(isset($_REQUEST['login'])) {
 		}
 	} 
 }
-if(isset($_REQUEST['register'])) {
+if(isset($_POST['register'])) {
 	if(isset($_POST['email'], $_POST['nom'], $_POST['prenom'], $_POST['password'], $_POST['password2'], $_POST['adresse'], $_POST['cp'], $_POST['ville'], $_POST['tel'])) {
 		$email = mysqli_real_escape_string($db,$_POST['email']);
 		$nom = mysqli_real_escape_string($db,$_POST['nom']);

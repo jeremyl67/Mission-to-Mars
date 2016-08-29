@@ -104,7 +104,7 @@
 		
 		$query = "UPDATE voyage SET depart='".$depart."', destination='".$destination."', nom='".$nom."' ,resume='".$resume."' ,date='".$date."' ,prix='".$prix."' ,classe_business='".$classe_business."' ,classe_eco='".$classe_eco."' ,premiere_classe='".$premiere_classe."' ,url='".$url."' WHERE id=".$id;
 		mysqli_query($db, $query);
-		// var_dump($query,mysqli_error($db));
+		
 
 		
 		header("Location: index.php?page=voyage");

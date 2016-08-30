@@ -1,0 +1,42 @@
+<div class="gradAndBoxShad voyage">
+	<img src="<?=htmlentities($voyage["url"])?>"> 
+	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
+
+	<p class="lead">
+	    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
+	</p>
+
+	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
+
+	<hr>
+
+	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
+
+	<hr>
+
+	<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
+
+	<hr>
+
+
+	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+
+	<hr>
+
+
+	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+
+	<?php require "apps/voyage_admin.php";?>
+	<?php require "apps/comment.php";?>
+	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
+
+	<form  method="POST" >
+		
+		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
+		<input type="hidden" name="action" value="comment">
+		<textarea class="commentVoyage"  name="comment" ></textarea>
+		<input type="number" name="note" >
+		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
+	</form>
+	<a class="btn btn-primary" href="index.php?page=tarif&id=<?=htmlentities($voyage['id'])?>">choisir</a>
+</div>

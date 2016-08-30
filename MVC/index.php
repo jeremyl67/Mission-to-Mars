@@ -18,7 +18,8 @@
 		"logout",
 		"voyage",
 		"tarif",
-		"comment"];
+		"comment",
+		"voyage_item"];
 	$db= mysqli_connect("localhost","root","troiswa","centauri");
 
 	

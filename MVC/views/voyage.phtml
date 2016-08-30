@@ -1,43 +1,14 @@
-<!-- <?=$error?> --> 
-<!-- <img src="<?=htmlentities($voyage["url"])?>"> --> 
-<div class="gradAndBoxShad voyage">
-	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
-	<p class="lead">
-	    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
-	</p>
+<div class='owl-carousel'>
 
-	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
-
-	<hr>
-
-	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
-
-	<hr>
-
-	<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
-
-	<hr>
-
-
-	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
-
-	<hr>
-
-
-	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
-
-	<?php require "apps/voyage_admin.php";?>
-	<?php require "apps/comment.php";?>
-	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
+<?php require 'apps/voyage_item.php';?>
 </div>
 
-	<form  method="POST" >
-		
-		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
-		<input type="hidden" name="action" value="comment">
-		<textarea class="commentVoyage"  name="comment" ></textarea>
-		<input type="text" name="note" >
-		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
-	</form>
-<hr>
+<style>
+	header:after{
+		content:"";
+		clear:both;
+		display: block;
+	}
+
+</style>

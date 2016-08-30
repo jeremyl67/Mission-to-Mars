@@ -35,7 +35,7 @@
 			mysqli_query($db, $query);
 			$id = mysqli_insert_id($db);	
 			
-			header("Location: index.php?page=voyage");
+			header("Location: index.php?page=voyage_item");
 			exit;	
 		}
 	}

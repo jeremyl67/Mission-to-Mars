@@ -1,5 +1,16 @@
 /*CENTAURI STELLAIRE*/
 /* structure */
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fontawesome-webfont.eot') format('eot'),
+	   url('fontawesome-webfont.svg') format('svg'),
+	   url('fontawesome-webfont.ttf') format('ttf'),
+	   url('fontawesome-webfont.woff') format('woff'),
+	   url('fontawesome-webfont.woff2') format('woff2'),
+	   url('FontAwesome.otf') format('otf');
+	font-weight: normal;
+	font-style: normal;
+}
 body{
 	font-family: "Titillium Web", Arial, helvetica, sans-serif, serif;
 	margin: 0;
@@ -12,7 +23,29 @@ body{
 	background-size: cover;
 	background-position: center;
 }
+.owl-prev:after{
+	font-family: "FontAwesome";
+	content:"\f190";
+	font-size: 46px;
+	color:rgb(210,70,35);
+	position:absolute;
+	top:50%;
+	left:1%;
 
+	
+}
+
+.owl-next:after{
+	font-family: "FontAwesome";
+	content:"\f18e";
+	font-size: 46px;
+	color:rgb(210,70,35);
+	position:absolute;
+	top:50%;
+	right:1%;
+
+	
+}
 *{
     box-sizing: border-box;
 }

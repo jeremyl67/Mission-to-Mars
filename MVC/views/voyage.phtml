@@ -23,6 +23,7 @@
 
 	<?php require "apps/voyage_admin.php";?>
 	<?php require "apps/comment.php";?>
+	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
 </div>
 
 	<form  method="POST" >
@@ -30,6 +31,7 @@
 		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
 		<input type="hidden" name="action" value="comment">
 		<textarea class="commentVoyage"  name="comment" ></textarea>
+		<input type="text" name="note" >
 		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
 	</form>
 <hr>

@@ -1,5 +1,5 @@
 <div class="gradAndBoxShad voyage">
-	<img src="<?=htmlentities($voyage["url"])?>"> 
+	<img src="<?=htmlentities($voyage["url"])?>" class="imgCaroussel"> 
 	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
 	<p class="lead">
@@ -24,7 +24,7 @@
 	<?php require "apps/comment.php";?>
 	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
 
-	<form  method="POST" >
+	<form method="POST" class="formVoyageItem" >
 		
 		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
 		<input type="hidden" name="action" value="comment">
@@ -32,5 +32,8 @@
 		<input type="number" name="note" >
 		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
 	</form>
+	<!--
 	<a class="btn btn-primary" href="index.php?page=tarif&id=<?=htmlentities($voyage['id'])?>">choisir</a>
+	-->
+
 </div>

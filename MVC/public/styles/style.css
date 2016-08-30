@@ -23,8 +23,8 @@ body{
 	background-size: cover;
 	background-position: center;
 }
-
-
+/*--CAROUSSEL------------------------------------------*/
+/*--------------La flêche gauche ----------------------*/
 .owl-prev:after{
 	font-family: "FontAwesome";
 	content:"\f190";
@@ -34,7 +34,7 @@ body{
 	top:50%;
 	left:1%;	
 }
-
+/*-------------La flêche droite ----------------------*/
 .owl-next:after{
 	font-family: "FontAwesome";
 	content:"\f18e";
@@ -45,35 +45,27 @@ body{
 	right:1%;	
 }
 
-*{
-    box-sizing: border-box;
-}
+.imgCaroussel{	width:90%;	height:100px;}
 
-ul, li{
-	margin: 0;
-	padding: 0;
-}
+*{    box-sizing: border-box;}
 
-.centauriTitle{
-	padding-top:80px;
-	padding-left:285px;
-}
+ul, li{	margin: 0;	padding: 0;}
 
-.titleVoyage{
-	color:#fff;
-}
+.centauriTitle{	padding-top:80px;	padding-left:285px;}
+
+.titleVoyage{	color:#fff;}
 
 
-h1, h2{
-	text-align: left;
-	margin:0;
-	font-style: ;
+h1, h2{	
+	text-align: left;	
+	margin:0;	
+	font-weight: normal;
+	color: #fff !important;
 }
+
 
 h1{
-	font-weight: normal;
 	font-size: 40px;
-	color: #fff !important;
 	margin-left: 25px;
 }
 
@@ -91,15 +83,11 @@ h3{
 	color: rgb(150,25,5);
 }
 
-p{
-	margin: 8px 20px 10px 0px;
-}
+p{	margin: 8px 20px 10px 0px;}
 
-a{
-	text-decoration: none;
-}
+a{	text-decoration: none;}
 
-hr{
+hr{	
 	color:rgb(250,100,100);
 	width: 99%;
 	box-shadow:  0px 0px 0.1em rgb(140,0,0);
@@ -116,16 +104,13 @@ img{
 	box-shadow:  0px 0px 1em rgb(20,0,0);
 }
 
-.img_article{
-	float: left;
-	width: 270px;
+.img_article{	float: left;	width: 270px;
 }
 
 .white{
 	color: #fff;
 	font-size: 15px;
 	line-height:20px;
-	text-align:
 }
 
 .left_white{
@@ -158,12 +143,6 @@ header{
 	box-shadow:  0px 0px 0.6em rgb(20,0,0);
 	display: block;
 	margin-bottom: 40px;
-}
-
-header:after{
-	content:"";
-	clear:both;
-	display: block;
 }
 
 /*--nav--------------------------------------------*/
@@ -218,9 +197,7 @@ nav a:hover{
 	box-shadow:  inset 0px 0px 0.6em rgb(140,0,0),  0px 0px 0.6em rgb(0,0,0);
 }
 /*--article--------------------------------------------*/
-article{
-	clear: both;
-}
+article{	clear: both;}
 
 .article{
 	display: block;
@@ -286,9 +263,10 @@ article{
 .voyage{
 	display:inline-block;
 	text-align: center;
-	width: 95%;
+	width: 90%;
 	margin-top: 20px;
 	border-radius: 15px 15px 15px 15px;
+	margin-bottom: 30px;
 }
 
 .login{
@@ -301,19 +279,14 @@ article{
 }
 
 
-.floatLeft{
-	float: left;
-}
+.floatLeft{	float: left;}
 
 
-.floatRight{
-	float: right;
-	text-align: right;
-}
+.floatRight{	float: right;	text-align: right;}
 
-input, select{
-	margin: 10px;
-}
+input, select{	margin: 10px;}
+
+.formVoyageItem{	margin-bottom: 30px;}
 
 /*--footer--------------------------------------------*/
 footer{
@@ -325,9 +298,7 @@ footer{
 /*--responsive tablette-------------------------------------------*/
 @media screen and (max-width: 800px){
 	
-	img{
-		margin-top: 0;
-	}
+	img{	margin-top: 0;}
 	
 	header{
 		padding: 0;

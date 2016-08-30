@@ -4,7 +4,7 @@ $(function(){
 		loop: true,
 		nav: true,
 		navText:	["",""],
-		autoHeight: true,
+		autoHeight: false,
 		autoplay:true,
 		autoplayTimeout:3000,
 		autoplayHoverPause:true,

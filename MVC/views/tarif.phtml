@@ -16,7 +16,7 @@
 	<input type="hidden" name="action">
 	<div>
 	<p>Prix du voyage : <?=htmlentities($voyage['prix']) . ".00 €" ?></p>
-	S<div>Choisir la formule</div>
+				<div>Choisir la formule</div>
 		<label for="classe_eco_<?= $voyage["id"] ?>">
 			<input type="radio" name="note" id="classe_eco_<?= $voyage["id"] ?>_1" value="<?=htmlentities($voyage["classe_eco"]). ".00 €"?>">classe-eco : <?=htmlentities($voyage["classe_eco"]). ".00 €"?>
 		</label>
@@ -35,7 +35,7 @@
 	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
 	<a class="btn btn-primary" href="index.php?page=article&id=<?=htmlentities($voyage["destination"])?>">En savoir plus</a>
-
+	<div><button type="submit">acheter</button></div>
 	<hr>
 
 

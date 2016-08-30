@@ -60,6 +60,11 @@ ul, li{
 	padding-left:285px;
 }
 
+.titleVoyage{
+	color:#fff;
+}
+
+
 h1, h2{
 	text-align: left;
 	margin:0;
@@ -69,7 +74,7 @@ h1, h2{
 h1{
 	font-weight: normal;
 	font-size: 40px;
-	color: #fff;
+	color: #fff !important;
 	margin-left: 25px;
 }
 
@@ -95,6 +100,11 @@ a{
 	text-decoration: none;
 }
 
+hr{
+	color:rgb(250,100,100);
+	width: 99%;
+	box-shadow:  0px 0px 0.1em rgb(140,0,0);
+}
 
 img{
 	max-width: 100%;
@@ -161,13 +171,15 @@ nav{
 	float: left;
 /*	background: #ff0000;
 */	padding-left: 155px;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
+
 }
-nav:after{
+
+/*nav:after{
 		content:"";
 		clear:both;
 	}
-
+*/
 
 .nav li{
 	display: inline-block;
@@ -186,6 +198,13 @@ nav:after{
 	border-style:solid;
 	border-color: rgb(170,20,0);
 	border-width:6px;
+}
+
+p a{
+	font-size: 15px;
+	font-weight: bolder;
+	color: white;
+	text-decoration: none;
 }
 
 nav ul li a{
@@ -229,7 +248,6 @@ article{
 	background: #fff;
 	overflow: hidden;
 }
-
 
 .mini_article{
 	display: inline-block;
@@ -277,20 +295,21 @@ article{
 */	font-size:20px;
 	display:inline-block;
 	text-align: center;
-	width: 90%;
+	width: 80%;
 	margin-left:15px;
 	margin-right:15px;
 	height:100px;
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-bottom: 5px;
 	border-color: rgb(170,20,0);
-	border-radius: 10px;
+	border-radius: 15px;
 	border-width:6px;
-	box-shadow:  inset 0px 0px 1.5em rgb(150,40,40);
+	box-shadow:  inset 0px 0px 1.5em rgb(100,60,60);
 }
 
 .submitComment{
-	margin-top: 10px;
+	width:250px;
+	margin-top: 8px;
 	margin-bottom: 5px;
 	box-shadow:  0px 0px 0.7em rgb(210,150,150);
 }
@@ -301,24 +320,23 @@ article{
 	transform: translateX(-50%);
 */	display:inline-block;
 	text-align: center;
-	width: 90%;
-	padding-bottom: 20px;
+	width: 95%;
 	margin-top: 20px;
-	margin-bottom: -20px;
 	border-radius: 15px 15px 15px 15px;
 
 }
 
 .login{
 	display:inline-block;
-	width: 40%;
-	padding: 20px;
-	margin-top: 40px;
-	margin-bottom: 40px;
+/*	text-align: right;
+*/	width: 46%;
+	padding: 2%;
+	margin: 2%;
+	text-align: right;
 	border-radius: 15px 15px 15px 15px;
-	margin-left: 100px;
-/*	background: rgb(210,70,35);
-/*	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
+/*	margin-left: 100px;
+	background: rgb(210,70,35);
+	background: -webkit-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -o-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: -moz-linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
 	background: linear-gradient(rgb(210,70,35), rgb(255,150,115), rgb(210,70,35));
@@ -328,6 +346,27 @@ article{
 	border-width:6px;
 	box-shadow:  inset 0px 0px 1em rgb(20,0,0);
 */	border-radius: 20px 20px 20px 20px;	
+}
+
+/*.login2{
+	display:inline-block;
+	float: left;
+	width: 48%;
+	padding: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-radius: 15px 15px 15px 15px;
+}
+*/
+
+.floatLeft{
+	float: left;
+}
+
+
+.floatRight{
+	float: right;
+	text-align: right;
 }
 
 input, select{
@@ -398,12 +437,6 @@ footer{
 	}
 
 	nav ul li a{
-	box-shadow:  none;
-	border-radius: 0px;	
-	border-width: 4px;
-	border-bottom: 0px;
-	border-left: 0px;
-	border-right: 0px;
 	transition: all 0.2s linear 0.2s;
 	}
 
@@ -422,6 +455,25 @@ footer{
 	overflow: hidden;
 	}
 
+	.gradAndBoxShad{
+		box-shadow: none;
+		border-width: 4px ;
+		border-radius: 0px;	
+		border-width: 4px ;
+		border-bottom: 0px ;
+		border-left: 0px ;
+		border-right: 0px ;
+	}
+
+	.voyage{
+		border-radius: 0;
+	}
+
+	.commentVoyage{
+		border-radius: 0;
+		border-width: 2px ;
+	}
+
 	.info{
 	display: block;
 	width: 100%;
@@ -429,7 +481,7 @@ footer{
 	padding: 30px 10px;
 	margin-bottom: 30px;
 	border-radius: 0px 0px 0px 0px;
-	border-width:4px;
+	border-width: 4px !important;
 	}
 
 	.login{

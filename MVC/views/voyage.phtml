@@ -1,7 +1,36 @@
+<<<<<<< HEAD
 
 <div class='owl-carousel'>
 
 <?php require 'apps/voyage_item.php';?>
+=======
+<!-- <?=$error?> --> 
+<!-- <img src="<?=htmlentities($voyage["url"])?>"> --> 
+<div class="gradAndBoxShad voyage">
+	<h1 class="titleVoyage"><?=htmlentities($voyage['nom'])?></h1>
+	<hr>
+	<p class="lead">
+	    date du voyage <a href="#"><?=htmlentities($voyage['date'])?></a>
+	</p>
+
+	<p>Départ :<span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
+
+	<hr>
+
+	<p>Destination :<span class="glyphicon glyphicon-time"></span> <?=htmlentities($voyage['destination'])?></p>
+
+	<hr>
+
+	<p>Prix du voyage : <?=htmlentities($voyage['prix'])?></p>
+
+	<hr>
+
+	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+
+	<?php require "apps/voyage_admin.php";?>
+	<?php require "apps/comment.php";?>
+	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
+>>>>>>> 368d6247711d9a6a25ffc8da1926037147bdcf0f
 </div>
 
 <style>

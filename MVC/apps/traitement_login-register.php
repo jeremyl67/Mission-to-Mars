@@ -12,16 +12,16 @@ if(isset($_POST['login'])) {
 			$error = " Merci de remplir le champ password";
 		} else {
 			$res = mysqli_query($db,' SELECT * FROM users WHERE email="'.$email.'" AND password=MD5("'.$password.'")');
-			$voyage = mysqli_fetch_assoc($res);
-			if (!$voyage) {
+			$user = mysqli_fetch_assoc($res);
+			if (!$user) {
 				$error = " l'email ou le mot de passe ne sont incorrects";
 			}
 			else
 			{
 				$bien = " Tout se passe bien pour le moment ! ";
-				$_SESSION["id"] = $voyage["id"];
-				$_SESSION["admin"] = $voyage["admin"];
-				$_SESSION['email'] = $voyage['email'];
+				$_SESSION["id"] = $user["id"];
+				$_SESSION["admin"] = $user["admin"];
+				$_SESSION['email'] = $user['email'];
 				header("Location: index.php?page=home");
 				exit;
 			} 

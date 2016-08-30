@@ -164,6 +164,12 @@ header{
 */
 }
 
+/*header:after{
+	content:"";
+	clear:both;
+	display: block;
+}
+*/
 
 /*--nav--------------------------------------------*/
 nav{

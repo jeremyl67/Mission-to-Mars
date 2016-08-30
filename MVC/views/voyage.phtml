@@ -1,6 +1,6 @@
 <!-- <?=$error?> --> 
-<!-- <img src="<?=$voyage["url"]?>"> --> 
-<div class="login gradAndBoxShad">
+<!-- <img src="<?=htmlentities($voyage["url"])?>"> --> 
+<div class="gradAndBoxShad voyage">
 	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
 	<p class="lead">
@@ -19,9 +19,11 @@
 
 	<hr>
 
+
 	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
 	<hr>
+
 
 	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
@@ -34,7 +36,7 @@
 		
 		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
 		<input type="hidden" name="action" value="comment">
-		<textarea class="form-control" rows="10" name="comment" ></textarea>
-		<button class="btn btn-default" type="submit">Envoyer</button>
+		<textarea class="commentVoyage"  name="comment" ></textarea>
+		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
 	</form>
 <hr>

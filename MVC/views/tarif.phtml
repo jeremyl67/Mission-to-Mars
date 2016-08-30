@@ -1,34 +1,42 @@
 
 <form method="post" action="index.php?page=pdf">
-<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
+	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
-<p class="lead">
-    date du voyage : <a href="#"><?=htmlentities($voyage['date'])?></a>
-</p>
+	<p class="lead">
+	    date du voyage : <a href="#"><?=htmlentities($voyage['date'])?></a>
+	</p>
 
-<p>Départ : <span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
+	<p>Départ : <span class="glyphicon glyphicon-qrcode"></span><?=htmlentities($voyage['depart'])?></p>
 
-<hr>
+	<hr>
 
-<p>Destination : <span class="glyphicon glyphicon-time"></span><?=htmlentities($voyage['destination'])?></p>
+	<p>Destination : <span class="glyphicon glyphicon-time"></span><?=htmlentities($voyage['destination'])?></p>
 
-<hr>
-<input type="hidden" name="action">
-<p>Prix du voyage : <?=htmlentities($voyage['prix']) . ".00 €" ?></p>
-	<p>Prix classe eco : <?=htmlentities($voyage["classe_eco"]). ".00 €"?></p>
-	<button type="submit">acheter</button>
-	<p>Prix classe business : <?=htmlentities($voyage["classe_business"]). ".00 €"?></p>
-	<button type="submit">acheter</button>
-	<p>Prix premiere classe : <?=htmlentities($voyage["premiere_classe"]). ".00 €"?></p>
-	<button type="submit" name="premiere_classe" value="1">acheter</button>
+	<hr>
+	<input type="hidden" name="action">
+	<div>
+	<p>Prix du voyage : <?=htmlentities($voyage['prix']) . ".00 €" ?></p>
+	S<div>Choisir la formule</div>
+		<label for="classe_eco_<?= $voyage["id"] ?>">
+			<input type="radio" name="note" id="classe_eco_<?= $voyage["id"] ?>_1" value="<?=htmlentities($voyage["classe_eco"]). ".00 €"?>">classe-eco : <?=htmlentities($voyage["classe_eco"]). ".00 €"?>
+		</label>
+		<label for="classe_business_<?= $voyage["id"] ?>">
+			<input type="radio" name="note" id="classe_business_<?= $voyage["id"] ?>_2" value="<?=htmlentities($voyage["classe_business"]). ".00 €"?>">classe-business : <?=htmlentities($voyage["classe_business"]). ".00 €"?>
+		</label>
+		<label for="premiere_classe_<?= $voyage["id"] ?>">
+			<input type="radio" name="note" id="premiere_classe_<?= $voyage["id"] ?>_3" value="<?=htmlentities($voyage["premiere_classe"]). ".00 €"?>" checked>premiere classe :  <?=htmlentities($voyage["premiere_classe"]). ".00 €"?>
+		</label>
+				
+	</div>
+		
 
-<hr>
+	<hr>
 
-<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
 
-<a class="btn btn-primary" href="index.php?page=article&id=<?=htmlentities($voyage["destination"])?>">En savoir plus</a>
+	<a class="btn btn-primary" href="index.php?page=article&id=<?=htmlentities($voyage["destination"])?>">En savoir plus</a>
 
-<hr>
+	<hr>
 
 
 

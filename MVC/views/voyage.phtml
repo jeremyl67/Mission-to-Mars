@@ -29,7 +29,17 @@
 	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
 </div>
 
-<style>
+
+	<form  method="POST" >
+		
+		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
+		<input type="hidden" name="action" value="comment">
+		<textarea class="commentVoyage"  name="comment" ></textarea>
+		<input type="text" name="note" placeholder="Attribuez une note sur 5 SVP!">
+		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
+	</form>
+
+<!-- <style>
 	header:after{
 		content:"";
 		clear:both;
@@ -37,3 +47,5 @@
 	}
 
 </style>
+-->
+

@@ -1,3 +1,6 @@
+<div class='owl-carousel'>
+
+<?php require 'apps/voyage_item.php';?>
 <!-- <?=$error?> --> 
 <!-- <img src="<?=htmlentities($voyage["url"])?>"> --> 
 <div class="gradAndBoxShad voyage">
@@ -26,6 +29,7 @@
 	<p>note moyenne : <?=htmlentities($voyage['note'])?></p>
 </div>
 
+
 	<form  method="POST" >
 		
 		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
@@ -34,3 +38,14 @@
 		<input type="text" name="note" placeholder="Attribuez une note sur 5 SVP!">
 		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
 	</form>
+
+<!-- <style>
+	header:after{
+		content:"";
+		clear:both;
+		display: block;
+	}
+
+</style>
+-->
+

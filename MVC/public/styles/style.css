@@ -404,12 +404,12 @@ footer{
 	}
 
 	nav ul li a{
-	box-shadow:  none;
+	box-shadow:  none !important;
 	border-radius: 0px;	
-	border-width: 4px;
-	border-bottom: 0px;
-	border-left: 0px;
-	border-right: 0px;
+	border-width: 4px !important;
+	border-bottom: 0px !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
 	transition: all 0.2s linear 0.2s;
 	}
 
@@ -428,6 +428,19 @@ footer{
 	overflow: hidden;
 	}
 
+	.gradAndBoxShad{
+		border-width: 4px !important;
+	}
+
+	.voyage{
+		border-radius: 0;
+	}
+
+	.commentVoyage{
+		border-radius: 0;
+		border-width: 2px !important;
+	}
+
 	.info{
 	display: block;
 	width: 100%;
@@ -435,7 +448,7 @@ footer{
 	padding: 30px 10px;
 	margin-bottom: 30px;
 	border-radius: 0px 0px 0px 0px;
-	border-width:4px;
+	border-width: 4px !important;
 	}
 
 	.login{
@@ -444,7 +457,7 @@ footer{
 	border-radius: 0px 0px 0px 0px;
 	margin: 20px 0px 20px 0px;
 	float: none;
-	border-width: 4px;
+	border-width: 4px !important;
 	}
 
 	.centauriTitle{

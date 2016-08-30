@@ -146,9 +146,8 @@ img{
 }
 /*--header--------------------------------------------*/
 header{
+	margin-bottom: 30px;
 	padding-bottom: 30px;
-	background-image: url("../images/background.jpg");
-	background-color:rgb(4,8,12);
 	background-image: url("../images/HeaderPlanet.jpg");
 	background-repeat: no-repeat;
 	background-size:1200px 240px;
@@ -174,8 +173,6 @@ nav{
 	padding-left: 105px;
 	margin-bottom: 15px;
 	position: absolute;
-
-
 }
 
 .nav li{
@@ -253,7 +250,6 @@ article{
 	padding: 0px 10px;
 	margin-bottom: 30px;
 	border-radius: 15px 0px 0px 15px;
-
 }
 /*--formulaire--------------------------------------------*/
 .register{
@@ -293,7 +289,6 @@ article{
 	width: 95%;
 	margin-top: 20px;
 	border-radius: 15px 15px 15px 15px;
-
 }
 
 .login{

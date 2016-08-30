@@ -163,6 +163,11 @@ header{
 	border-right: 1px #fff solid;
 */
 }
+header:after{
+	content:"";
+	clear:both;
+	display: block;
+}
 
 
 /*--nav--------------------------------------------*/

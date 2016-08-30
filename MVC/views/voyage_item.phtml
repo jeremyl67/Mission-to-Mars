@@ -1,5 +1,7 @@
 <div class="gradAndBoxShad voyage">
-	<img src="<?=htmlentities($voyage["url"])?>"> 
+	<?php if($voyage["url"] != "") : ?>
+		<img src="<?=htmlentities($voyage["url"])?>" alt=""> 
+	<?php endif; ?>
 	<h1 style="color:#000;"><?=htmlentities($voyage['nom'])?></h1>
 
 	<p class="lead">
@@ -24,7 +26,7 @@
 	<hr>
 
 
-	<p>Résumé du voyage : <?=htmlentities($voyage['resume'])?></p>
+	
 
 	<?php require "apps/voyage_admin.php";?>
 	<?php require "apps/comment.php";?>
@@ -35,7 +37,25 @@
 		<input type="hidden" name="id" value="<?=htmlentities($voyage["id"])?>">
 		<input type="hidden" name="action" value="comment">
 		<textarea class="commentVoyage"  name="comment" ></textarea>
-		<input type="number" name="note" >
+		<div>
+			Notez ce voyage
+			<label for="note_<?= $voyage["id"] ?>_1">
+				<input type="radio" name="note" id="note_<?= $voyage["id"] ?>_1" value="1">1
+			</label>
+			<label for="note_<?= $voyage["id"] ?>_2">
+				<input type="radio" name="note" id="note_<?= $voyage["id"] ?>_2" value="2">2
+			</label>
+			<label for="note_<?= $voyage["id"] ?>_3">
+				<input type="radio" name="note" id="note_<?= $voyage["id"] ?>_3" value="3" checked>3
+			</label>
+			<label for="note_<?= $voyage["id"] ?>_4">
+				<input type="radio" name="note" id="note_<?= $voyage["id"] ?>_4" value="4">4
+			</label>
+			<label for="note_<?= $voyage["id"] ?>_5">
+				<input type="radio" name="note" id="note_<?= $voyage["id"] ?>_5" value="5">5
+			</label>
+		</div>
+		<!-- <input type="number" name="note" > -->
 		<button class="btn btn-default submitComment" type="submit">Envoyer</button>
 	</form>
 	<a class="btn btn-primary" href="index.php?page=tarif&id=<?=htmlentities($voyage['id'])?>">choisir</a>

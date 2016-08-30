@@ -11,6 +11,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 body{
 	font-family: "Titillium Web", Arial, helvetica, sans-serif, serif;
 	margin: 0;
@@ -23,6 +24,7 @@ body{
 	background-size: cover;
 	background-position: center;
 }
+
 .owl-prev:after{
 	font-family: "FontAwesome";
 	content:"\f190";
@@ -33,6 +35,7 @@ body{
 	left:4%;
 
 	
+
 }
 
 .owl-next:after{
@@ -42,10 +45,10 @@ body{
 	color:rgb(210,70,35);
 	position:absolute;
 	top:50%;
-	right:4%;
 
-	
+	right:4%;
 }
+
 *{
     box-sizing: border-box;
 }
@@ -63,7 +66,6 @@ ul, li{
 .titleVoyage{
 	color:#fff;
 }
-
 
 h1, h2{
 	text-align: left;
@@ -334,49 +336,50 @@ footer{
 	}
 
 	nav{
-	padding-left: 0px;
-	margin-bottom: 1px;
-	margin: 0px;
-	float: none;
+		padding-left: 0px;
+		margin-bottom: 1px;
+		margin: 0px;
+		float: none;
+		position: static;	
 	}
 	
 	.nav li{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin: 0;
-	font-size: 18px;
-	padding: 0px;
-	
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		margin: 0;
+		font-size: 18px;
+		padding: 0px;
+		border-top: 4px;
 	}
 
 	nav ul li a{
-	transition: all 0.2s linear 0.2s;
+		transition: all 0.2s linear 0.2s;
+		border-top: 4px;
+		border-left: 0px !important;
+		border-right: 0px !important;
+		border-bottom: 0px !important;
 	}
 
 	nav a:hover{
-	box-shadow: none;
+		box-shadow: none;
 	}
 
 	.article{
-	display: block;
-	width: 100%;
-	text-align: left;
-	padding: 10px;
-	margin-bottom: 10px;
-	margin-top: 0;
-	background: #fff;
-	overflow: hidden;
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 10px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		background: #fff;
+		overflow: hidden;
 	}
 
 	.gradAndBoxShad{
 		box-shadow: none;
-		border-width: 4px ;
 		border-radius: 0px;	
-		border-width: 4px ;
-		border-bottom: 0px ;
-		border-left: 0px ;
-		border-right: 0px ;
+		border-width: 4px;
 	}
 
 	.voyage{
@@ -389,38 +392,37 @@ footer{
 	}
 
 	.info{
-	display: block;
-	width: 100%;
-	text-align: left;
-	padding: 30px 10px;
-	margin-bottom: 30px;
-	border-radius: 0px 0px 0px 0px;
-	border-width: 4px !important;
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 30px 10px;
+		margin-bottom: 30px;
+		border-radius: 0px 0px 0px 0px;
 	}
 
 	.login{
-	width: 100%;
-	padding: 10px;
-	border-radius: 0px 0px 0px 0px;
-	margin: 20px 0px 20px 0px;
-	float: none;
-	border-width: 4px;
+		width: 100%;
+		padding: 10px;
+		border-radius: 0px 0px 0px 0px;
+		margin: 20px 0px 20px 0px;
+		float: none;
+		border-width: 4px;
 	}
 
 	.centauriTitle{
-	padding-top:50px;
-	padding-left:50px;
+		padding-top:50px;
+		padding-left:50px;
 	}
 
 	h1{
-	font-size: 30px;
-	margin-left: 150px;
+		font-size: 30px;
+		margin-left: 150px;
 	}
 
 	h2{
-	font-size: 20px;
-	margin-left: 150px;
-	margin-bottom: 20px;
+		font-size: 20px;
+		margin-left: 150px;
+		margin-bottom: 20px;	
 	}
 	
 	h3{
@@ -430,6 +432,7 @@ footer{
 	}
 
 	footer{
+		
 		margin-top: 20px;
 		border-radius: 0;
 		border-width: 4px;	
@@ -439,15 +442,15 @@ footer{
 @media screen and (max-width: 500px){
 	
 	h1{
-	font-size: 20px;
-	margin-left: 115px;
+		font-size: 20px;
+		margin-left: 115px;
 	}
 
 	h2{
-	font-size: 18px;
+		font-size: 18px;
 	
-	margin-left: 40px;
-	margin-bottom: 0px;
+		margin-left: 40px;
+		margin-bottom: 0px;
 	}
 
 	img{
